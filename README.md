@@ -1,13 +1,13 @@
-#EndPlus 1.5.0 for Minecraft 1.7.2
+#EndPlus 1.5.1 for Minecraft 1.7.2
 
 
 ##How to Install:
 
 1. Install Minecraft Forge
 2. Run minecraft to create a mods folder 
-3. Place the EndPlus-1.5.0-mc1.7.2.jar file into your mods folder inside your minecraft folder
+3. Place the EndPlus-1.5.1-mc1.7.2.jar file into your mods folder inside your minecraft folder
 
-If Forge is not loading the mod, check that you installed the EndPlus-1.5.0-mc1.7.2.jar file, not the EndPlus-1.5.0.zip file.
+If Forge is not loading the mod, check that you installed the EndPlus-1.5.1-mc1.7.2.jar file, not the EndPlus-1.5.1.zip file.
 
 ##Mod Info:
 
