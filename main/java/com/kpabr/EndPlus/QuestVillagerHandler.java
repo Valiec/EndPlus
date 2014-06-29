@@ -144,13 +144,95 @@ break;
         //System.out.println(EndPlus.mobs.qdh.questY);
         //System.out.println(EndPlus.mobs.qdh.questZ);
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("x: "+EndPlus.mobs.qdh.questX+", y: "+EndPlus.mobs.qdh.questY+", z: "+EndPlus.mobs.qdh.questZ));
+        this.genStructureSupport(villager, random);
         }
         else
         {
             //Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("x: "+EndPlus.mobs.qdh.questX+", y: "+EndPlus.mobs.qdh.questY+", z: "+EndPlus.mobs.qdh.questZ+" failed"));
             this.genStructure(villager, random);
         }
+}
+    public void genStructureSupport(EntityVillager villager, Random random)
+    {            
+        int i = 1;
+        while(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3) != Blocks.air ||
+        villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3) != Blocks.air ||
+        villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3) != Blocks.air ||
+        villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3) != Blocks.air)
+        {
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ+3, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX-3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+3, EndPlus.mobs.qdh.questY-i, EndPlus.mobs.qdh.questZ-3, Blocks.quartz_block);
+            }
+            i++;
+        }
+        
+        int j = 1;
+        while(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) != Blocks.air ||
+                villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) != Blocks.air)
+        {
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1, Blocks.quartz_block);
+            }    
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ, Blocks.quartz_block);
+            }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1, Blocks.quartz_block);
+            }
+            j++;
+        }
+        
     }
     
 
 }
+
+
+
