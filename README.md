@@ -3,11 +3,20 @@
 
 ##How to Install:
 
+###For Developers:
+
+1. Install Minecraft Forge as source and unzip the downloaded ziip file
+2. Run ./gradlew eclipse inside the unzipped folder
+2. Clone this repository
+3. Copy the src folder in place of the src folder created by Forge
+
+###For Users:
+
 1. Install Minecraft Forge
 2. Run minecraft to create a mods folder 
-3. Place the EndPlus-1.5.1-mc1.7.2.jar file into your mods folder inside your minecraft folder
+3. Place the EndPlus-1.5.0-mc1.7.2.jar file into your mods folder inside your minecraft folder
 
-If Forge is not loading the mod, check that you installed the EndPlus-1.5.1-mc1.7.2.jar file, not the EndPlus-1.5.1.zip file.
+If Forge is not loading the mod, check that you installed the EndPlus-1.5.0-mc1.7.2.jar file, not the EndPlus-1.5.0.zip file.
 
 ##Mod Info:
 
