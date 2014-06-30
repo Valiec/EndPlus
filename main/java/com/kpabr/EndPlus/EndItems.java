@@ -55,6 +55,7 @@ public class EndItems {
     public static Item bootsGFlamerite;
     public static Item helmetGFlamerite;
     public static Item endRD;
+    public static Item infusedQuartz;
     
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -121,6 +122,7 @@ public class EndItems {
         GameRegistry.registerItem(this.enderWart, "ender_wart");
         GameRegistry.registerItem(this.enderWartCooked, "ender_wart_cooked");
         GameRegistry.registerItem(this.endRD, "ender_redstone_dust");
+        GameRegistry.registerItem(this.infusedQuartz, "infused_quartz");
     }
     
     public void setupItems()
@@ -180,5 +182,7 @@ public class EndItems {
         this.flameriteIngot = new ItemBase().setTextureName("endplus:ingotFlamerite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("flameriteIngot");
         this.gflameriteIngot = new ItemBase().setTextureName("endplus:ingotgFlamerite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("gflameriteIngot");
         this.endRD = new ItemEnderRedstone().setTextureName("endplus:ender_redstone_dust").setCreativeTab(EndPlus.tabEndplusRedstone).setUnlocalizedName("endRedstoneDust");
+        
+        this.infusedQuartz = new ItemBase().setTextureName("endplus:netherquartz_infused").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("infusedQuartz");
     }
 }

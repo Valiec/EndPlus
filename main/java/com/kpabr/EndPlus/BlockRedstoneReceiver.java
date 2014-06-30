@@ -100,6 +100,7 @@ public class BlockRedstoneReceiver extends Block{
         }
         return 0;
     }
+    @Override
     public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
     {
         int meta = p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_);
@@ -155,7 +156,31 @@ public class BlockRedstoneReceiver extends Block{
         if((p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz) == EndPlus.blocks.red))
         {
             int meta2 = p_149695_1_.getBlockMetadata(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz);
-            p_149695_1_.notifyBlocksOfNeighborChange(p_149695_2_, p_149695_3_, p_149695_4_, p_149695_5_);
+            if(p_149695_1_.getBlock(p_149695_2_ - 1, p_149695_3_, p_149695_4_) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_ - 1, p_149695_3_, p_149695_4_, p_149695_5_);
+            }
+            if(p_149695_1_.getBlock(p_149695_2_ + 1, p_149695_3_, p_149695_4_) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_ + 1, p_149695_3_, p_149695_4_, p_149695_5_);
+            }
+            if(p_149695_1_.getBlock(p_149695_2_, p_149695_3_ - 1, p_149695_4_) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_, p_149695_3_ - 1, p_149695_4_, p_149695_5_);
+            }
+            if(p_149695_1_.getBlock(p_149695_2_, p_149695_3_ + 1, p_149695_4_) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_, p_149695_3_ + 1, p_149695_4_, p_149695_5_);
+            }
+            if(p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ - 1) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_, p_149695_3_, p_149695_4_ - 1, p_149695_5_);
+            }
+            if(p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_ + 1) != this)
+            {
+            p_149695_1_.notifyBlockOfNeighborChange(p_149695_2_, p_149695_3_, p_149695_4_ + 1, p_149695_5_);
+            }
+            //p_149695_1_.notifyBlocksOfNeighborChange(p_149695_2_, p_149695_3_, p_149695_4_, p_149695_5_);
             //System.out.println("HI3!!!!!!!!!!!!!!!!!!!!!!!");           
             //System.out.println(meta2);
           
