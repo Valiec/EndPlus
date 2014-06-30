@@ -5,8 +5,8 @@ tile.questBlock.name=Quest Block
 
 tile.mossStairs.name=Moss Stone Stairs
 
-tile.BlockEnder.name=Ender Obsidian
-tile.BlockEnderEnch.name=Enchanted Ender Obsidian
+tile.Enderblock.name=Ender Obsidian
+tile.EnchEnderblock.name=Enchanted Ender Obsidian
 
 tile.enderRedstoneOre.name=Ender Redstone Ore
 
