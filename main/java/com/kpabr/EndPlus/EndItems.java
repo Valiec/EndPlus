@@ -56,6 +56,7 @@ public class EndItems {
     public static Item helmetGFlamerite;
     public static Item endRD;
     public static Item infusedQuartz;
+    public static Item swordInfusedQuartz;
     
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -63,6 +64,7 @@ public class EndItems {
     static ToolMaterial gFlamerite = EnumHelper.addToolMaterial("GFLAMERITE", 3, 782, 14.0F, 4, 26);
     static ToolMaterial Endstone = EnumHelper.addToolMaterial("ENDSTONE", 1, 181, 4.0F, 1.0F, 14);
     static ToolMaterial Netherstone = EnumHelper.addToolMaterial("NETHERSTONE", 1, 151, 4.0F, 1.0F, 10);
+    static ToolMaterial InfusedQuartz = EnumHelper.addToolMaterial("INFUSEDQUARTZ", 2, 250, 12.0F, 2.0F, 14);
     
     static ArmorMaterial EnderiteArmor = EnumHelper.addArmorMaterial("ENDERITE", 57, new int[]{4, 8, 6, 4}, 30);
     static ArmorMaterial FlameriteArmor = EnumHelper.addArmorMaterial("FLAMERITE", 55, new int[]{4, 6, 5, 3}, 25);
@@ -123,6 +125,8 @@ public class EndItems {
         GameRegistry.registerItem(this.enderWartCooked, "ender_wart_cooked");
         GameRegistry.registerItem(this.endRD, "ender_redstone_dust");
         GameRegistry.registerItem(this.infusedQuartz, "infused_quartz");
+        
+        GameRegistry.registerItem(this.swordInfusedQuartz, "infused_quartz_sword");
     }
     
     public void setupItems()
@@ -184,5 +188,7 @@ public class EndItems {
         this.endRD = new ItemEnderRedstone().setTextureName("endplus:ender_redstone_dust").setCreativeTab(EndPlus.tabEndplusRedstone).setUnlocalizedName("endRedstoneDust");
         
         this.infusedQuartz = new ItemBase().setTextureName("endplus:netherquartz_infused").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("infusedQuartz");
+        
+        this.swordInfusedQuartz = new ItemSwordBase(InfusedQuartz).setTextureName("endplus:SwordQI4").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzSword");
     }
 }

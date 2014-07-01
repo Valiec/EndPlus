@@ -185,6 +185,8 @@ public class BlockRedstoneEmitter extends Block{
                 //if(!(dx == 255 && dy == 255 && dz == 255))
                 //{
                 p_149695_1_.setBlock(p_149695_2_+dx*n, p_149695_3_+dy*n, p_149695_4_+dz*n, Blocks.air);
+                
+                //TODO check adjacent blocks for powered emitters
                 //}
                 n++;
             }
