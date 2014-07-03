@@ -54,7 +54,24 @@ public class EndBlocks {
     public static Block Enderblock;
     public static Block EnchEnderblock;
     public static Block blockEnderRedstone;
-    public static Block questBlock;
+    public static Block questBlock0;
+    public static Block questBlock1;
+    public static Block questBlock2;
+    public static Block questBlock3;
+    public static Block questBlock4;
+    public static Block questBlock5;
+    public static Block questBlock6;
+    public static Block questBlock7;
+    public static Block questBlock8;
+    public static Block questBlock9;
+    public static Block questBlock10;
+    public static Block questBlock11;
+    public static Block questBlock12;
+    public static Block questBlock13;
+    public static Block questBlock14;
+    public static Block questBlock15;
+    public static Block[] questBlocks = {questBlock0, questBlock1, questBlock2, questBlock3, questBlock4, questBlock5, questBlock6, questBlock7, questBlock8, questBlock9, questBlock10, questBlock11, questBlock12, questBlock13, questBlock14, questBlock15};
+    
     
     public void registerBlocks()
     {
@@ -99,7 +116,22 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.Enderblock, "ender_block");
         GameRegistry.registerBlock(this.EnchEnderblock, "ench_ender_block");
         GameRegistry.registerBlock(this.blockEnderRedstone, "ender_redstone_block");
-        GameRegistry.registerBlock(this.questBlock, "quest_block");
+        GameRegistry.registerBlock(this.questBlock0, "quest_block_0");
+        GameRegistry.registerBlock(this.questBlock1, "quest_block_1");
+        GameRegistry.registerBlock(this.questBlock2, "quest_block_2");
+        GameRegistry.registerBlock(this.questBlock3, "quest_block_3");
+        GameRegistry.registerBlock(this.questBlock4, "quest_block_4");
+        GameRegistry.registerBlock(this.questBlock5, "quest_block_5");
+        GameRegistry.registerBlock(this.questBlock6, "quest_block_6");
+        GameRegistry.registerBlock(this.questBlock7, "quest_block_7");
+        GameRegistry.registerBlock(this.questBlock8, "quest_block_8");
+        GameRegistry.registerBlock(this.questBlock9, "quest_block_9");
+        GameRegistry.registerBlock(this.questBlock10, "quest_block_10");
+        GameRegistry.registerBlock(this.questBlock11, "quest_block_11");
+        GameRegistry.registerBlock(this.questBlock12, "quest_block_12");
+        GameRegistry.registerBlock(this.questBlock13, "quest_block_13");
+        GameRegistry.registerBlock(this.questBlock14, "quest_block_14");
+        GameRegistry.registerBlock(this.questBlock15, "quest_block_15");
     }
     public void setupBlocks()
     {
@@ -145,8 +177,22 @@ public class EndBlocks {
         this.Enderblock = new BlockEnder(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("Enderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.EnchEnderblock = new BlockEnder(true).setCreativeTab(EndPlus.tabEndplus).setBlockName("EnchEnderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.blockEnderRedstone = new BlockEnderRedstoneCompressed().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockEnderRedstone").setBlockTextureName("endplus:blockEnderRedstone").setHardness(5.0F).setResistance(10.0F);
-        this.questBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock").setHardness(1.5F).setResistance(10.0F);
-        
+        this.questBlock0 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_0").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock1 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_1").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock2 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_2").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock3 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_3").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock4 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_4").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock5 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_5").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock6 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_6").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock7 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_7").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock8 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_8").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock9 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_9").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock10 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_10").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock11 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_11").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock12 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_12").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock13 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_13").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
     }
     public void setupHarvestLevels()
     {
