@@ -57,6 +57,10 @@ public class EndItems {
     public static Item endRD;
     public static Item infusedQuartz;
     public static Item swordInfusedQuartz;
+    public static Item pickaxeInfusedQuartz;
+    public static Item axeInfusedQuartz;
+    public static Item hoeInfusedQuartz;
+    public static Item shovelInfusedQuartz;
     
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -127,6 +131,10 @@ public class EndItems {
         GameRegistry.registerItem(this.infusedQuartz, "infused_quartz");
         
         GameRegistry.registerItem(this.swordInfusedQuartz, "infused_quartz_sword");
+        GameRegistry.registerItem(this.pickaxeInfusedQuartz, "infused_quartz_pickaxe");
+        GameRegistry.registerItem(this.axeInfusedQuartz, "infused_quartz_axe");
+        GameRegistry.registerItem(this.hoeInfusedQuartz, "infused_quartz_hoe");
+        GameRegistry.registerItem(this.shovelInfusedQuartz, "infused_quartz_shovel");
     }
     
     public void setupItems()
@@ -189,6 +197,10 @@ public class EndItems {
         
         this.infusedQuartz = new ItemBase().setTextureName("endplus:netherquartz_infused").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("infusedQuartz");
         
-        this.swordInfusedQuartz = new ItemSwordBase(InfusedQuartz).setTextureName("endplus:SwordQI4").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzSword");
+        this.swordInfusedQuartz = new ItemSwordBase(InfusedQuartz).setTextureName("endplus:SwordQI6").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzSword");
+        this.pickaxeInfusedQuartz = new ItemPickaxeBase(InfusedQuartz).setTextureName("endplus:PickaxeQI2").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzPick");
+        this.axeInfusedQuartz = new ItemAxeBase(InfusedQuartz).setTextureName("endplus:HatchetQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzAxe");
+        this.hoeInfusedQuartz = new ItemHoeBase(InfusedQuartz).setTextureName("endplus:HoeQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzHoe");
+        this.shovelInfusedQuartz = new ItemShovelBase(InfusedQuartz).setTextureName("endplus:ShovelQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzShovel");
     }
 }

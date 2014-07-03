@@ -57,15 +57,15 @@ public class WorldProviderEnder extends WorldProvider
         return null;
     }
 
-    @SideOnly(Side.CLIENT)
+    //@SideOnly(Side.CLIENT)
 
     /**
      * Return Vec3D with biome specific fog color
      */
-    public Vec3 getFogColor(float par1, float par2)
+    public Vec3 getFogColor(float p_76562_1_, float p_76562_2_)
     {
         int i = 10518688;
-        float f2 = MathHelper.cos(par1 * (float)Math.PI * 2.0F) * 2.0F + 0.5F;
+        float f2 = MathHelper.cos(p_76562_1_ * (float)Math.PI * 2.0F) * 2.0F + 0.5F;
 
         if (f2 < 0.0F)
         {
@@ -83,7 +83,7 @@ public class WorldProviderEnder extends WorldProvider
         f3 *= f2 * 0.0F + 0.15F;
         f4 *= f2 * 0.0F + 0.15F;
         f5 *= f2 * 0.0F + 0.15F;
-        return this.worldObj.getWorldVec3Pool().getVecFromPool((double)f3, (double)f4, (double)f5);
+        return Vec3.createVectorHelper((double)f3, (double)f4, (double)f5);
     }
 
     @SideOnly(Side.CLIENT)

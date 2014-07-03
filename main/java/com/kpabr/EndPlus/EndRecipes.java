@@ -94,7 +94,13 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.mossStairs, 4), new Object[]{"  X", " XX", "XXX", 'X', Blocks.mossy_cobblestone});
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.mossStairs, 4), new Object[]{"X  ", "XX ", "XXX", 'X', Blocks.mossy_cobblestone});
         
-        GameRegistry.addRecipe(new ItemStack(EndPlus.items.swordInfusedQuartz, 1), new Object[]{" XX", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.swordInfusedQuartz, 1), new Object[]{" X ", " X ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.pickaxeInfusedQuartz, 1), new Object[]{"XXX", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.axeInfusedQuartz, 1), new Object[]{"XX ", "XW ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.axeInfusedQuartz, 1), new Object[]{" XX", " WX", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.hoeInfusedQuartz, 1), new Object[]{" XX", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.hoeInfusedQuartz, 1), new Object[]{"XX ", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.shovelInfusedQuartz, 1), new Object[]{" X ", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
         
     }
     public void setupShapelessCrafting()
