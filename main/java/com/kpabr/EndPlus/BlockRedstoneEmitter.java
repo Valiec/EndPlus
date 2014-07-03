@@ -184,6 +184,52 @@ public class BlockRedstoneEmitter extends Block{
                 //System.out.println(p_149695_1_.getBlock(p_149695_2_, p_149695_3_, p_149695_4_));
                 //if(!(dx == 255 && dy == 255 && dz == 255))
                 //{
+            	if(n == 1)
+            	{
+            	if(p_149695_1_.getBlock(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz))
+            		{
+            			continue;
+            		}
+            	}
+            	if(p_149695_1_.getBlock(p_149695_2_+dx+1, p_149695_3_+dy, p_149695_4_+dz) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx+1, p_149695_3_+dy, p_149695_4_+dz))
+            		{
+            			continue;
+            		}
+            	}
+            	if(p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy-1, p_149695_4_+dz) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx, p_149695_3_+dy-1, p_149695_4_+dz))
+            		{
+            			continue;
+            		}
+            	}
+            	if(p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy+1, p_149695_4_+dz) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx, p_149695_3_+dy+1, p_149695_4_+dz))
+            		{
+            			continue;
+            		}
+            	}
+            	if(p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz-1) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz-1))
+            		{
+            			continue;
+            		}
+            	}
+            	if(p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz+1) == EndPlus.blocks.redEmitter)
+            	{
+            		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz+1))
+            		{
+            			continue;
+            		}
+            	}
+            	//check all emitters around block unpowered
+            	}
                 p_149695_1_.setBlock(p_149695_2_+dx*n, p_149695_3_+dy*n, p_149695_4_+dz*n, Blocks.air);
                 
                 //TODO check adjacent blocks for powered emitters
