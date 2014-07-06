@@ -61,6 +61,10 @@ public class EndItems {
     public static Item axeInfusedQuartz;
     public static Item hoeInfusedQuartz;
     public static Item shovelInfusedQuartz;
+    public static Item chestplateInfusedQuartz;
+    public static Item legsInfusedQuartz;
+    public static Item bootsInfusedQuartz;
+    public static Item helmetInfusedQuartz;
     
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -73,6 +77,7 @@ public class EndItems {
     static ArmorMaterial EnderiteArmor = EnumHelper.addArmorMaterial("ENDERITE", 57, new int[]{4, 8, 6, 4}, 30);
     static ArmorMaterial FlameriteArmor = EnumHelper.addArmorMaterial("FLAMERITE", 55, new int[]{4, 6, 5, 3}, 25);
     static ArmorMaterial gFlameriteArmor = EnumHelper.addArmorMaterial("GFLAMERITE", 53, new int[]{4, 6, 5, 3}, 25);
+    static ArmorMaterial InfusedQuartzArmor = EnumHelper.addArmorMaterial("INFUSEDQUARTZ", 15, new int[]{3, 8, 5, 2}, 25);
 
     public void registerItems()
     {
@@ -135,6 +140,11 @@ public class EndItems {
         GameRegistry.registerItem(this.axeInfusedQuartz, "infused_quartz_axe");
         GameRegistry.registerItem(this.hoeInfusedQuartz, "infused_quartz_hoe");
         GameRegistry.registerItem(this.shovelInfusedQuartz, "infused_quartz_shovel");
+        
+        GameRegistry.registerItem(this.helmetInfusedQuartz, "infusedQuartz_helmet");
+        GameRegistry.registerItem(this.chestplateInfusedQuartz, "infusedQuartz_chestplate");
+        GameRegistry.registerItem(this.legsInfusedQuartz, "infusedQuartz_leggings");
+        GameRegistry.registerItem(this.bootsInfusedQuartz, "infusedQuartz_boots");
     }
     
     public void setupItems()
@@ -202,5 +212,10 @@ public class EndItems {
         this.axeInfusedQuartz = new ItemAxeBase(InfusedQuartz).setTextureName("endplus:HatchetQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzAxe");
         this.hoeInfusedQuartz = new ItemHoeBase(InfusedQuartz).setTextureName("endplus:HoeQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzHoe");
         this.shovelInfusedQuartz = new ItemShovelBase(InfusedQuartz).setTextureName("endplus:ShovelQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzShovel");
+        
+        this.helmetInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 0).setTextureName("endplus:helmetQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzHelmet");
+        this.chestplateInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 1).setTextureName("endplus:chestplateQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzChestplate");
+        this.legsInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 2).setTextureName("endplus:leggingsQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzLegs");
+        this.bootsInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 3).setTextureName("endplus:bootsQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzBoots");
     }
 }

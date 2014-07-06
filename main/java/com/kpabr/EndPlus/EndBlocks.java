@@ -71,6 +71,7 @@ public class EndBlocks {
     public static Block questBlock14;
     public static Block questBlock15;
     public static Block[] questBlocks = {questBlock0, questBlock1, questBlock2, questBlock3, questBlock4, questBlock5, questBlock6, questBlock7, questBlock8, questBlock9, questBlock10, questBlock11, questBlock12, questBlock13, questBlock14, questBlock15};
+	public static Block infusedQuartzBlock;
     
     
     public void registerBlocks()
@@ -132,6 +133,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.questBlock13, "quest_block_13");
         GameRegistry.registerBlock(this.questBlock14, "quest_block_14");
         GameRegistry.registerBlock(this.questBlock15, "quest_block_15");
+        GameRegistry.registerBlock(this.infusedQuartzBlock, "infused_quartz_block");
     }
     public void setupBlocks()
     {
@@ -193,6 +195,7 @@ public class EndBlocks {
         this.questBlock13 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_13").setHardness(1.5F).setResistance(10.0F);
         this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
         this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
+        this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(3.0F).setResistance(10.0F);
     }
     public void setupHarvestLevels()
     {

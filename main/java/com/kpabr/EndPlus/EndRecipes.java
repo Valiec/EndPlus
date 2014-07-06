@@ -101,6 +101,11 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.hoeInfusedQuartz, 1), new Object[]{" XX", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.hoeInfusedQuartz, 1), new Object[]{"XX ", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.shovelInfusedQuartz, 1), new Object[]{" X ", " W ", " W ", 'W', Items.stick, 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.chestplateInfusedQuartz, 1), new Object[]{"X X", "XXX", "XXX", 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.legsInfusedQuartz, 1), new Object[]{"XXX", "X X", "X X", 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.helmetInfusedQuartz, 1), new Object[]{"XXX", "X X", 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.bootsInfusedQuartz, 1), new Object[]{"X X", "X X", 'X', EndPlus.items.infusedQuartz});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.infusedQuartzBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', EndPlus.items.infusedQuartz});
         
     }
     public void setupShapelessCrafting()
@@ -119,6 +124,7 @@ public class EndRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.enderiteGem, 9), new Object[]{EndPlus.blocks.enderiteBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.endRD, 9), new Object[]{EndPlus.blocks.blockEnderRedstone});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.infusedQuartz, 1), new Object[]{Items.quartz, Items.gold_nugget});
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.infusedQuartz, 9), new Object[]{EndPlus.blocks.infusedQuartzBlock});
     }
     public void addEgg(Item mobItem, int id)
     {

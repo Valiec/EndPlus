@@ -1,3 +1,34 @@
+tile.infusedQuartzBlock.name=Block of Infused Quartz
+
+item.infusedQuartzChestplate.name=Infused Quartz Chestplate
+item.infusedQuartzBoots.name=Infused Quartz Boots
+item.infusedQuartzLegs.name=Infused Quartz Leggings
+item.infusedQuartzHelmet.name=Infused Quartz Helmet
+
+item.infusedQuartzPick.name=Infused Quartz Pickaxe
+item.infusedQuartzShovel.name=Infused Quartz Shovel
+item.infusedQuartzAxe.name=Infused Quartz Axe
+item.infusedQuartzHoe.name=Infused Quartz Hoe
+item.infusedQuartzSword.name=Infused Quartz Sword
+
+tile.questBlock_0.name=Quest Block (Flamerite-Gold Sword)
+tile.questBlock_1.name=Quest Block (Flamerite-Gold Pickaxe)
+tile.questBlock_2.name=Quest Block (Flamerite-Gold Axe)
+tile.questBlock_3.name=Quest Block (Flamerite-Gold Helmet)
+tile.questBlock_4.name=Quest Block (Block Breaker)
+tile.questBlock_5.name=Quest Block (Block Placer)
+tile.questBlock_6.name=Quest Block (Block of Umbrite)
+tile.questBlock_7.name=Quest Block (Block of Lucite)
+tile.questBlock_8.name=Quest Block (Netherstone Pickaxe)
+tile.questBlock_9.name=Quest Block (Ender Wart)
+tile.questBlock_10.name=Quest Block (Cavern Stone)
+tile.questBlock_11.name=Quest Block (Overworld Essence)
+tile.questBlock_12.name=Quest Block (Enchanted Golden Apple)
+tile.questBlock_13.name=Quest Block (Enchanted Ender Obsidian)
+tile.questBlock_14.name=Quest Block (Enderwood Sapling)
+tile.questBlock_15.name=Quest Block (Nether Star)
+
+
 item.infusedQuartz.name=Infused Nether Quartz
 
 tile.BlockBreaker.name=Block Breaker
