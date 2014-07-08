@@ -251,6 +251,7 @@ public class BiomeModdedDecorator extends BiomeDecorator
             {
                 ;
             }
+            //https://github.com/Valiec/EndPlus
 
             this.waterlilyGen.generate(this.currentWorld, this.randomGenerator, k, i1, l);
         }

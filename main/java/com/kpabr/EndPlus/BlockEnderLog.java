@@ -64,7 +64,7 @@ public class BlockEnderLog extends BlockNewLog {
             var13 = ((double)p_149734_5_.nextFloat() - 0.5D) * 2.0F * (float)var19;
             var15 = ((double)p_149734_5_.nextFloat() - 0.5D) * 2.0F * (float)var19;
             var17 = ((double)p_149734_5_.nextFloat() - 0.5D) * 2.0F * (float)var19;
-
+            String createdby = "https://github.com/Valiec/EndPlus";
             /*if (p_149734_1_.getBlock(p_149734_2_ - 1, p_149734_3_, p_149734_4_) != this && p_149734_1_.getBlock(p_149734_2_ + 1, p_149734_3_, p_149734_4_) != this)
             {
                 var7 = (double)p_149734_2_ + 0.5D + 0.25D * (double)var19;

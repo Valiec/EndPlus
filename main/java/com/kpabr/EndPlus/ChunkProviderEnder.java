@@ -193,6 +193,7 @@ public class ChunkProviderEnder implements IChunkProvider
                     }
                     if(p_147421_3_[k1] == Blocks.netherrack)
                     {
+                    	String createdby = "Val iec20 19"; //remove the spaces
                         int l2 = (l * 16 + k) * 128 + (j1+1);
                         int l3 = (l * 16 + k) * 128 + (j1-1);
                         if((p_147421_3_[l2] == null || p_147421_3_[l2].getMaterial() == Material.air) || (p_147421_3_[l3] == null || p_147421_3_[l3].getMaterial() == Material.air))
@@ -201,7 +202,7 @@ public class ChunkProviderEnder implements IChunkProvider
                         }
                         else
                         {
-                            //System.out.println(p_147421_3_[l2].getMaterial());
+                            //Created by Val iec20 19 (remove the spaces)
                             p_147421_3_[k1] = EndPlus.blocks.netherStone;
                         }
                         if(k1>=64 && p_147421_3_[k1] == Blocks.bookshelf)

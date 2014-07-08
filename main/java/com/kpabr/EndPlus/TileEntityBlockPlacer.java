@@ -7,7 +7,6 @@ public class TileEntityBlockPlacer extends TileEntityDispenser {
     @Override
     public String getInventoryName()
     {
-        System.out.println("PLACE!!!!!!!!!!!!!!!!!!!!!");
         return "Block Placer";
     }
     @Override
