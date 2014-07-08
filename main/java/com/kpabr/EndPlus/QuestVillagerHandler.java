@@ -278,6 +278,10 @@ public class QuestVillagerHandler implements IVillageTradeHandler{
             {
                 villager.worldObj.setBlock(EndPlus.mobs.qdh.questX+1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ+1, Blocks.quartz_block);
             }
+            if(villager.worldObj.getBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1) == Blocks.air)
+            {
+                villager.worldObj.setBlock(EndPlus.mobs.qdh.questX-1, EndPlus.mobs.qdh.questY-j, EndPlus.mobs.qdh.questZ-1, Blocks.quartz_block);
+            }
             j++;
         }
         
