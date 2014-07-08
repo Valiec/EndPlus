@@ -3,8 +3,11 @@ package com.kpabr.EndPlus;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemRedstone;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -207,15 +210,15 @@ public class EndItems {
         
         this.infusedQuartz = new ItemBase().setTextureName("endplus:netherquartz_infused").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("infusedQuartz");
         
-        this.swordInfusedQuartz = new ItemSwordBase(InfusedQuartz).setTextureName("endplus:SwordQI6").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzSword");
-        this.pickaxeInfusedQuartz = new ItemPickaxeBase(InfusedQuartz).setTextureName("endplus:PickaxeQI2").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzPick");
-        this.axeInfusedQuartz = new ItemAxeBase(InfusedQuartz).setTextureName("endplus:HatchetQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzAxe");
-        this.hoeInfusedQuartz = new ItemHoeBase(InfusedQuartz).setTextureName("endplus:HoeQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzHoe");
-        this.shovelInfusedQuartz = new ItemShovelBase(InfusedQuartz).setTextureName("endplus:ShovelQI").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzShovel");
+        this.swordInfusedQuartz = new ItemSword(InfusedQuartz).setTextureName("endplus:swordInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzSword");
+        this.pickaxeInfusedQuartz = new ItemPickaxeBase(InfusedQuartz).setTextureName("endplus:pickaxeInfusedQuartz").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzPick");
+        this.axeInfusedQuartz = new ItemAxeBase(InfusedQuartz).setTextureName("endplus:hatchetInfusedQuartz").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzAxe");
+        this.hoeInfusedQuartz = new ItemHoeBase(InfusedQuartz).setTextureName("endplus:hoeInfusedQuartz").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzHoe");
+        this.shovelInfusedQuartz = new ItemShovelBase(InfusedQuartz).setTextureName("endplus:shovelInfusedQuartz").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("infusedQuartzShovel");
         
-        this.helmetInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 0).setTextureName("endplus:helmetQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzHelmet");
-        this.chestplateInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 1).setTextureName("endplus:chestplateQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzChestplate");
-        this.legsInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 2).setTextureName("endplus:leggingsQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzLegs");
-        this.bootsInfusedQuartz = new ItemArmorBase(InfusedQuartzArmor, 8, 3).setTextureName("endplus:bootsQI").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzBoots");
+        this.helmetInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 0).setTextureName("endplus:helmetInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzHelmet");
+        this.chestplateInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 1).setTextureName("endplus:chestplateInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzChestplate");
+        this.legsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 2).setTextureName("endplus:leggingsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzLegs");
+        this.bootsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 3).setTextureName("endplus:bootsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzBoots");
     }
 }
