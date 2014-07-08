@@ -2,6 +2,7 @@ package com.kpabr.EndPlus;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRedstoneWire;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -41,7 +42,7 @@ public class EndBlocks {
     public static Block enderStalk;
     public static Block graniteRough;
     public static Block graniteSmooth;
-    public static BlockEnderRedstone endRedstone;
+    public static BlockRedstoneWire endRedstone;
     public static Block endRedstoneOre;
     public static Block litEndRedstoneOre;
     public static Block redEmitter;
@@ -104,7 +105,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.enderTorch, "ender_torch");
         GameRegistry.registerBlock(this.graniteRough, "granite");
         GameRegistry.registerBlock(this.graniteSmooth, "polished_granite");
-        GameRegistry.registerBlock(this.endRedstone, "ender_redstone");
+        //GameRegistry.registerBlock(this.endRedstone, "ender_redstone");
         GameRegistry.registerBlock(this.endRedstoneOre, "ender_redstone_ore");
         GameRegistry.registerBlock(this.litEndRedstoneOre, "lit_ender_redstone_ore");
         GameRegistry.registerBlock(this.redEmitter, ItemBlockRedstone.class, "redstone_emitter");
@@ -166,7 +167,7 @@ public class EndBlocks {
         this.netherStone = new BlockBase(Material.rock).setBlockTextureName("endplus:netherStone").setCreativeTab(EndPlus.tabEndplus).setBlockName("netherStone").setHardness(1.3F).setResistance(10.0F); 
         this.flameriteOre = new BlockBase(Material.rock).setBlockTextureName("endplus:flameriteOre").setCreativeTab(EndPlus.tabEndplus).setBlockName("flameriteOre").setHardness(1.5F).setResistance(3.0F);
         this.endSapling = new BlockEnderSapling().setCreativeTab(EndPlus.tabEndplus).setBlockName("enderSapling");
-        this.endRedstone = (BlockEnderRedstone)(new BlockEnderRedstone().setCreativeTab(null).setBlockName("enderRedstoneDust")).setTickRandomly(true);
+        this.endRedstone = (BlockRedstoneWire)(new BlockRedstoneWire().setCreativeTab(null).setBlockName("enderRedstoneDust")).setTickRandomly(true);
         this.endRedstoneOre = new BlockEnderRedstoneOre(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderRedstoneOre").setBlockTextureName("endplus:enderRedstoneOre").setHardness(3.0F).setResistance(15.0F);
         this.litEndRedstoneOre = new BlockEnderRedstoneOre(true).setCreativeTab(null).setBlockName("litEnderRedstoneOre").setBlockTextureName("endplus:enderRedstoneOre").setTickRandomly(true).setLightLevel(0.625F).setHardness(3.0F).setResistance(15.0F);
         this.redEmitter = new BlockRedstoneEmitter().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("RedstoneEmitter").setHardness(0.5F);
@@ -179,23 +180,23 @@ public class EndBlocks {
         this.Enderblock = new BlockEnder(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("Enderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.EnchEnderblock = new BlockEnder(true).setCreativeTab(EndPlus.tabEndplus).setBlockName("EnchEnderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.blockEnderRedstone = new BlockEnderRedstoneCompressed().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockEnderRedstone").setBlockTextureName("endplus:blockEnderRedstone").setHardness(5.0F).setResistance(10.0F);
-        this.questBlock0 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_0").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock1 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_1").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock2 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_2").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock3 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_3").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock4 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_4").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock5 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_5").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock6 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_6").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock7 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_7").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock8 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_8").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock9 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_9").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock10 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_10").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock11 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_11").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock12 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_12").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock13 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_13").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
-        this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
-        this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(3.0F).setResistance(10.0F);
+        this.questBlock0 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_sword").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_0").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock1 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_pickaxe").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_1").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock2 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_hatchet").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_2").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock3 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_helmet").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_3").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock4 = new BlockQuest().setBlockTextureName("endplus:quest_block_bbreaker").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_4").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock5 = new BlockQuest().setBlockTextureName("endplus:quest_block_bplacer").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_5").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock6 = new BlockQuest().setBlockTextureName("endplus:quest_block_umbrite_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_6").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock7 = new BlockQuest().setBlockTextureName("endplus:quest_block_lucite_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_7").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock8 = new BlockQuest().setBlockTextureName("endplus:quest_block_netherstone_pickaxe").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_8").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock9 = new BlockQuest().setBlockTextureName("endplus:quest_block_ender_wart").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_9").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock10 = new BlockQuest().setBlockTextureName("endplus:quest_block_cavern_stone").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_10").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock11 = new BlockQuest().setBlockTextureName("endplus:quest_block_overworld_essence").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_11").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock12 = new BlockQuest().setBlockTextureName("endplus:quest_block_enchanted_golden_apple").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_12").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock13 = new BlockQuest().setBlockTextureName("endplus:quest_block_enchanted_ender_obsidian").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_13").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block_enderwood_sapling").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
+        this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block_nether_star").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
+        this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(0.8F);
     }
     public void setupHarvestLevels()
     {
@@ -224,6 +225,23 @@ public class EndBlocks {
         mossStairs.setHarvestLevel("pickaxe", 0);
         Enderblock.setHarvestLevel("pickaxe", 3);
         EnchEnderblock.setHarvestLevel("pickaxe", 3);
+        infusedQuartzBlock.setHarvestLevel("pickaxe", 1);
+        questBlock0.setHarvestLevel("pickaxe", 2);
+        questBlock1.setHarvestLevel("pickaxe", 2);
+        questBlock2.setHarvestLevel("pickaxe", 2);
+        questBlock3.setHarvestLevel("pickaxe", 2);
+        questBlock4.setHarvestLevel("pickaxe", 2);
+        questBlock5.setHarvestLevel("pickaxe", 2);
+        questBlock6.setHarvestLevel("pickaxe", 2);
+        questBlock7.setHarvestLevel("pickaxe", 2);
+        questBlock8.setHarvestLevel("pickaxe", 2);
+        questBlock9.setHarvestLevel("pickaxe", 2);
+        questBlock10.setHarvestLevel("pickaxe", 2);
+        questBlock11.setHarvestLevel("pickaxe", 2);
+        questBlock12.setHarvestLevel("pickaxe", 2);
+        questBlock13.setHarvestLevel("pickaxe", 2);
+        questBlock14.setHarvestLevel("pickaxe", 2);
+        questBlock15.setHarvestLevel("pickaxe", 2);
         
     }
     

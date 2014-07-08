@@ -1,4 +1,4 @@
-package com.kpabr.EndPlus;
+/*package com.kpabr.EndPlus;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -197,11 +197,11 @@ public class BlockEnderRedstone extends BlockRedstoneWire
     {
             return true;
     }
-    @SideOnly(Side.CLIENT)
-    public static IIcon getRedstoneWireIcon(String p_150173_0_)
-    {
-        return p_150173_0_.equals("cross") ? EndPlus.blocks.endRedstone.field_150182_M : (p_150173_0_.equals("line") ? EndPlus.blocks.endRedstone.field_150183_N : (p_150173_0_.equals("cross_overlay") ? EndPlus.blocks.endRedstone.field_150184_O : (p_150173_0_.equals("line_overlay") ? EndPlus.blocks.endRedstone.field_150180_P : null)));
-    }
+    //@SideOnly(Side.CLIENT)
+    //public static IIcon getRedstoneWireIconn(String p_150173_0_)
+    //{
+    //    return p_150173_0_.equals("cross") ? EndPlus.blocks.endRedstone.field_150182_M : (p_150173_0_.equals("line") ? EndPlus.blocks.endRedstone.field_150183_N : (p_150173_0_.equals("cross_overlay") ? EndPlus.blocks.endRedstone.field_150184_O : (p_150173_0_.equals("line_overlay") ? EndPlus.blocks.endRedstone.field_150180_P : null)));
+    //}
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
@@ -217,4 +217,4 @@ public class BlockEnderRedstone extends BlockRedstoneWire
     }
 
    
-}
+}*/

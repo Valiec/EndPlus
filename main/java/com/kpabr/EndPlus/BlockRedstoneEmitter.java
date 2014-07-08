@@ -190,6 +190,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -197,6 +198,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx+1, p_149695_3_+dy, p_149695_4_+dz))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -204,6 +206,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx, p_149695_3_+dy-1, p_149695_4_+dz))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -211,6 +214,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx, p_149695_3_+dy+1, p_149695_4_+dz))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -218,6 +222,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz-1))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -225,6 +230,7 @@ public class BlockRedstoneEmitter extends Block{
             	{
             		if(p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_+dx-1, p_149695_3_+dy, p_149695_4_+dz+1))
             		{
+            			n++;
             			continue;
             		}
             	}
@@ -232,7 +238,6 @@ public class BlockRedstoneEmitter extends Block{
             	}
                 p_149695_1_.setBlock(p_149695_2_+dx*n, p_149695_3_+dy*n, p_149695_4_+dz*n, Blocks.air);
                 
-                //TODO check adjacent blocks for powered emitters
                 //}
                 n++;
             }

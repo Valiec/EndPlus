@@ -1,0 +1,20 @@
+[
+{
+"modid": "endplus",
+"name": "EndPlus",
+"description": "The Nether and End improvement mod.
+
+This mod adds new ores, tools, mobs, foods, and terrain generation to the Nether and End dimensions.
+
+See the readme for a full description.",
+"version": "1.5.2",
+"mcversion": "1.7.2",
+"logoFile": "",
+"url": "http://tinyurl.com/EndPlus",
+"authorList": ["Valiec2019"],
+"credits": "",
+"parent": "",
+"screenshots": [],
+"dependencies": []
+}
+]

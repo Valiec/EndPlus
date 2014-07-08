@@ -107,6 +107,8 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.bootsInfusedQuartz, 1), new Object[]{"X X", "X X", 'X', EndPlus.items.infusedQuartz});
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.infusedQuartzBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', EndPlus.items.infusedQuartz});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.EnchEnderblock, 8), new Object[]{"XXX", "XYX", "XXX", 'X', EndPlus.blocks.Enderblock, 'Y', Items.blaze_powder});
+        
     }
     public void setupShapelessCrafting()
     {
