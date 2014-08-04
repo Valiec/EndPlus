@@ -24,6 +24,8 @@ public class EndBlocks {
     public static Block buoy;
     public static Block endLeaves;
     public static Block endLeavesGen;
+    public static Block enchLeaves;
+    public static Block enchLeavesGen;
     public static Block endLog;
     public static Block enderiteBlock;
     public static Block flameriteBlock;
@@ -73,6 +75,8 @@ public class EndBlocks {
     public static Block questBlock15;
     public static Block[] questBlocks = {questBlock0, questBlock1, questBlock2, questBlock3, questBlock4, questBlock5, questBlock6, questBlock7, questBlock8, questBlock9, questBlock10, questBlock11, questBlock12, questBlock13, questBlock14, questBlock15};
 	public static Block infusedQuartzBlock;
+	public static Block enchGrass;
+    public static Block golderaldOre;
     
     
     public void registerBlocks()
@@ -83,6 +87,8 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.buoy, ItemBlockBuoy.class, "buoy");
         GameRegistry.registerBlock(this.endLeaves, "ender_leaves");
         GameRegistry.registerBlock(this.endLeavesGen, "ender_leaves_decay");
+        GameRegistry.registerBlock(this.enchLeaves, "enchanted_leaves");
+        GameRegistry.registerBlock(this.enchLeavesGen, "enchanted_leaves_decay");
         GameRegistry.registerBlock(this.endLog, "ender_log");
         GameRegistry.registerBlock(this.netherEssence, "nether_essence");
         GameRegistry.registerBlock(this.enderEssence, "ender_essence");
@@ -135,12 +141,16 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.questBlock14, "quest_block_14");
         GameRegistry.registerBlock(this.questBlock15, "quest_block_15");
         GameRegistry.registerBlock(this.infusedQuartzBlock, "infused_quartz_block");
+        GameRegistry.registerBlock(this.enchGrass, ItemBlockEndGrass.class, "enchanted_grass");
+        GameRegistry.registerBlock(this.golderaldOre, "golderald_ore");
     }
     public void setupBlocks()
     {
         this.buoy = new BlockBuoy(Material.rock).setBlockName("buoy").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.9F);
         this.endLeaves = new BlockEnderLeaves(false).setBlockName("enderLeaves").setCreativeTab(EndPlus.tabEndplus).setLightOpacity(1);
         this.endLeavesGen = new BlockEnderLeaves(true).setBlockName("enderLeaves").setCreativeTab(null).setLightOpacity(1);
+        this.enchLeaves = new BlockEnchLeaves(false).setBlockName("enchLeaves").setCreativeTab(EndPlus.tabEndplus).setLightOpacity(1);
+        this.enchLeavesGen = new BlockEnchLeaves(true).setBlockName("enchLeaves").setCreativeTab(null).setLightOpacity(1);
         this.endLog = new BlockEnderLog().setBlockName("enderLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_big_oak");
         this.netherTorch = new BlockTorchBase().setBlockTextureName("endplus:netherTorch").setBlockName("netherTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
         this.enderTorch = new BlockTorchBase().setBlockTextureName("endplus:enderTorch").setBlockName("enderTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
@@ -197,6 +207,8 @@ public class EndBlocks {
         this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block_enderwood_sapling").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
         this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block_nether_star").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
         this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(0.8F);
+        this.enchGrass = new BlockEnchGrass(Material.grass).setBlockName("enchGrass").setHardness(1.6F).setCreativeTab(EndPlus.tabEndplus).setTickRandomly(true);
+        this.golderaldOre = new BlockGolderaldOre(Material.rock).setBlockTextureName("endplus:oreGolderald").setCreativeTab(EndPlus.tabEndplus).setBlockName("golderaldOre").setHardness(1.5F).setResistance(15.0F);
     }
     public void setupHarvestLevels()
     {
@@ -242,6 +254,7 @@ public class EndBlocks {
         questBlock13.setHarvestLevel("pickaxe", 2);
         questBlock14.setHarvestLevel("pickaxe", 2);
         questBlock15.setHarvestLevel("pickaxe", 2);
+        enchGrass.setHarvestLevel("shovel", 0);
         
     }
     

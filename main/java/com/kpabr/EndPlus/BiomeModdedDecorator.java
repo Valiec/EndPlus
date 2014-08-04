@@ -10,6 +10,7 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenBigMushroom;
+import net.minecraft.world.gen.feature.WorldGenBigTree;
 import net.minecraft.world.gen.feature.WorldGenCactus;
 import net.minecraft.world.gen.feature.WorldGenClay;
 import net.minecraft.world.gen.feature.WorldGenDeadBush;
@@ -19,6 +20,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenPumpkin;
 import net.minecraft.world.gen.feature.WorldGenReed;
 import net.minecraft.world.gen.feature.WorldGenSand;
+import net.minecraft.world.gen.feature.WorldGenTrees;
 import net.minecraft.world.gen.feature.WorldGenWaterlily;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.*;
@@ -173,7 +175,7 @@ public class BiomeModdedDecorator extends BiomeDecorator
             this.gravelAsSandGen.generate(this.currentWorld, this.randomGenerator, j, this.currentWorld.getTopSolidOrLiquidBlock(j, k), k);
         }
 
-        i = this.treesPerChunk;
+        i = this.treesPerChunk+25;
 
         if (this.randomGenerator.nextInt(10) == 0)
         {
@@ -189,13 +191,22 @@ public class BiomeModdedDecorator extends BiomeDecorator
             k = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
             l = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
             i1 = this.currentWorld.getHeightValue(k, l);
-            WorldGenAbstractTree worldgenabstracttree = p_150513_1_.func_150567_a(this.randomGenerator);
+            WorldGenModdedTree worldgenabstracttree = new WorldGenBigTreeModded(false);
             worldgenabstracttree.setScale(1.0D, 1.0D, 1.0D);
-
+            if(this.randomGenerator.nextInt(10) == 0)
+            {
             if (worldgenabstracttree.generate(this.currentWorld, this.randomGenerator, k, i1, l))
             {
                 worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
             }
+            }
+            WorldGenModdedForest worldgenabstracttree2 = (new WorldGenModdedForest(false, true));
+            worldgenabstracttree2.setScale(1.0D, 1.0D, 1.0D);
+            worldgenabstracttree2.generate(this.currentWorld, this.randomGenerator, k, i1, l);
+            //if ()
+            //{
+             //   worldgenabstracttree2.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
+            //}
         }
 
         doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, BIG_SHROOM);

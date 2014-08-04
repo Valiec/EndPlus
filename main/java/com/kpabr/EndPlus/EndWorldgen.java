@@ -1,9 +1,22 @@
 package com.kpabr.EndPlus;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 import net.minecraft.world.WorldServer;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.ChunkProviderEnd;
 import net.minecraft.world.gen.ChunkProviderHell;
 import net.minecraft.world.gen.ChunkProviderServer;
+import net.minecraft.world.gen.layer.GenLayer;
+import net.minecraft.world.gen.layer.GenLayerBiome;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
+import net.minecraftforge.common.BiomeManager.BiomeEntry;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
@@ -29,6 +42,22 @@ public class EndWorldgen {
         //DimensionManager.registerProviderType(dimID, WorldProviderEnder.class, true);
         DimensionManager.registerDimension(dimID, dimID);
         GameRegistry.registerWorldGenerator(enderblock, 1);
+        BiomeGenEnchHills eh = new BiomeGenEnchHills(80, 0);
+        BiomeEntry eeh = new BiomeEntry(eh, 10);
+        BiomeManager.warmBiomes.add(eeh);
+        BiomeManager.desertBiomes.add(eeh);
+        BiomeManager.coolBiomes.add(eeh);
+        BiomeManager.icyBiomes.add(eeh);
+        //BiomeManager.
+        BiomeDictionary.registerBiomeType(eh, Type.FOREST);
+        BiomeManager.addSpawnBiome(eh);
+        for (BiomeGenBase biome : BiomeGenBase.getBiomeGenArray())
+        {
+        	if(biome != eh)
+        	{
+        	BiomeManager.removeSpawnBiome(biome);
+        	}
+        }
     }
     
     @SubscribeEvent

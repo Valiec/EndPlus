@@ -15,6 +15,7 @@ public class EndMobs {
         VillagerRegistry.instance().registerVillagerSkin(8, new ResourceLocation("minecraft:textures/entity/villager/villager.png"));
         VillagerRegistry.instance().registerVillageTradeHandler(8, new QuestVillagerHandler());
         EntityRegistry.registerGlobalEntityID(EntityDragonfire.class, "Dragonfire", 80, 0x000000, 0x5555FF);
+        EntityRegistry.registerGlobalEntityID(EntityHerobrine.class, "Herobrine", 81, 0x00AFAF, 0xFFFFFF);
         EntityRegistry.addSpawn(EntityDragonfire.class, 8, 1, 2, EnumCreatureType.monster, BiomeGenBase.sky);
         
     }
