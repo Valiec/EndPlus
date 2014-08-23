@@ -109,6 +109,9 @@ public class EndRecipes {
         
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.EnchEnderblock, 8), new Object[]{"XXX", "XYX", "XXX", 'X', EndPlus.blocks.Enderblock, 'Y', Items.blaze_powder});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.chiseledStone, 1), new Object[]{"X", "X", 'X', Blocks.stone_slab});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.stoneSlab, 12), new Object[]{"XXX", "XXX", 'X', Blocks.stone});
+        
     }
     public void setupShapelessCrafting()
     {
@@ -127,6 +130,8 @@ public class EndRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.endRD, 9), new Object[]{EndPlus.blocks.blockEnderRedstone});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.infusedQuartz, 1), new Object[]{Items.quartz, Items.gold_nugget});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.infusedQuartz, 9), new Object[]{EndPlus.blocks.infusedQuartzBlock});
+        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone_slab), new Object[]{EndPlus.blocks.stoneSlab});
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.stoneSlab), new Object[]{Blocks.stone_slab});
     }
     public void addEgg(Item mobItem, int id)
     {

@@ -30,7 +30,7 @@ import cpw.mods.fml.relauncher.Side;
 @Mod(modid = EndPlus.MODID, version = EndPlus.VERSION, name = EndPlus.NAME)
 public class EndPlus
 {
-    @SidedProxy(clientSide="com.kpabr.EndPlus.client.ClientProxy", serverSide="com.valiec.EndPlus.CommonProxy")
+    @SidedProxy(clientSide="com.kpabr.EndPlus.client.ClientProxy", serverSide="com.kpabr.EndPlus.CommonProxy")
     public static CommonProxy proxy;
  
     /*Mod ID and Version declarations*/
@@ -79,7 +79,7 @@ public class EndPlus
         
         ClientCommandHandler.instance.registerCommand(new TestCommand());
         ClientCommandHandler.instance.registerCommand(new EndPlusCommand());
-        ClientCommandHandler.instance.registerCommand(new QuestCommand());
+        //ClientCommandHandler.instance.registerCommand(new QuestCommand());
 
         
         

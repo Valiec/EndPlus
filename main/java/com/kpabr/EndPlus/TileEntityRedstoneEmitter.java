@@ -19,7 +19,7 @@ public class TileEntityRedstoneEmitter extends TileEntity {
     
     public TileEntityRedstoneEmitter() {
     
-        System.out.println("Reaction5!");
+        //System.out.println("Reaction5!");
         }
     @Override
     public void readFromNBT(NBTTagCompound compound) {

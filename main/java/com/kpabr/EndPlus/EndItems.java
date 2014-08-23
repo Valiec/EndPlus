@@ -1,6 +1,7 @@
 package com.kpabr.EndPlus;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
@@ -68,6 +69,9 @@ public class EndItems {
     public static Item legsInfusedQuartz;
     public static Item bootsInfusedQuartz;
     public static Item helmetInfusedQuartz;
+    public static Item golderaldGem;
+    public static Item stoneSlab;
+    public static Item questCompass;
     
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -148,6 +152,11 @@ public class EndItems {
         GameRegistry.registerItem(this.chestplateInfusedQuartz, "infusedQuartz_chestplate");
         GameRegistry.registerItem(this.legsInfusedQuartz, "infusedQuartz_leggings");
         GameRegistry.registerItem(this.bootsInfusedQuartz, "infusedQuartz_boots");
+        
+        GameRegistry.registerItem(this.golderaldGem, "golderald_gem");
+        //GameRegistry.registerItem(this.stoneSlab, "smooth_stone_slab");
+        
+        GameRegistry.registerItem(this.questCompass, "quest_compass");
     }
     
     public void setupItems()
@@ -220,5 +229,10 @@ public class EndItems {
         this.chestplateInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 1).setTextureName("endplus:chestplateInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzChestplate");
         this.legsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 2).setTextureName("endplus:leggingsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzLegs");
         this.bootsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 3).setTextureName("endplus:bootsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzBoots");
+        
+        this.golderaldGem = new ItemGolderaldGem().setTextureName("endplus:gemGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldGem");
+        this.stoneSlab = new ItemBlockStoneSlab(Blocks.stone).setCreativeTab(EndPlus.tabEndplus);
+        
+        this.questCompass = new ItemQuestCompass().setTextureName("endplus:questcompass").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldGem");
     }
 }

@@ -445,7 +445,7 @@ public class WorldGenBigTreeModded extends WorldGenModdedTree
         Block blockb = this.worldObj.getBlock(this.basePos[0], this.basePos[1], this.basePos[2]);
 
         boolean isSoil = (block == EndPlus.blocks.enchGrass || block == Blocks.grass || block == Blocks.dirt) && blockb == Blocks.air;
-        System.out.println(isSoil);
+        //System.out.println(isSoil);
         if (!isSoil)
         {
             return false;

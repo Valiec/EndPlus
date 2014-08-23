@@ -27,7 +27,7 @@ public class BlockGolderaldOre extends Block {
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3)
     {
-        return EndPlus.items.enderiteGem;
+        return EndPlus.items.golderaldGem;
     }
 	@Override
     public int quantityDropped(Random par1Random)

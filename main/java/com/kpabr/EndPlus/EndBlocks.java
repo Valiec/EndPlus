@@ -7,6 +7,7 @@ import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemSlab;
 
 public class EndBlocks {
 
@@ -52,7 +53,7 @@ public class EndBlocks {
     public static Block red;
     public static Block bBreaker;
     public static Block mossStairs;
-    public static Block mossStone;
+    //public static Block mossStone;
     public static Block bPlacer;
     public static Block Enderblock;
     public static Block EnchEnderblock;
@@ -77,6 +78,9 @@ public class EndBlocks {
 	public static Block infusedQuartzBlock;
 	public static Block enchGrass;
     public static Block golderaldOre;
+    public static Block chiseledStone;
+	public static Block stoneSlab;
+	public static Block doubleStoneSlab;
     
     
     public void registerBlocks()
@@ -119,7 +123,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.red, "redstone_emitted");
         GameRegistry.registerBlock(this.bBreaker, ItemBlockRedstone.class, "block_breaker");
         GameRegistry.registerBlock(this.mossStairs, "moss_stone_stairs");
-        GameRegistry.registerBlock(this.mossStone, "moss_stone_2");
+        //GameRegistry.registerBlock(this.mossStone, "moss_stone_2");
         GameRegistry.registerBlock(this.bPlacer, ItemBlockRedstone.class, "block_placer");
         GameRegistry.registerBlock(this.Enderblock, "ender_block");
         GameRegistry.registerBlock(this.EnchEnderblock, "ench_ender_block");
@@ -143,6 +147,9 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.infusedQuartzBlock, "infused_quartz_block");
         GameRegistry.registerBlock(this.enchGrass, ItemBlockEndGrass.class, "enchanted_grass");
         GameRegistry.registerBlock(this.golderaldOre, "golderald_ore");
+        GameRegistry.registerBlock(this.chiseledStone, "chiseled_stone");
+        GameRegistry.registerBlock(this.stoneSlab, ItemBlockStoneSlab.class, "single_stone_slab");
+        GameRegistry.registerBlock(this.doubleStoneSlab, ItemBlockStoneSlab.class, "double_stone_slab");
     }
     public void setupBlocks()
     {
@@ -184,8 +191,8 @@ public class EndBlocks {
         this.bBreaker = new BlockBreaker().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockBreaker").setHardness(0.5F);
         this.redReceiver = new BlockRedstoneReceiver().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("RedstoneReceiver").setHardness(0.5F);
         this.red = new BlockEmittedRedstone().setCreativeTab(null).setBlockName("RedstoneEmitted").setBlockTextureName("endplus:enderRed");
-        this.mossStone = new BlockBase(Material.rock).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("stoneMoss2").setCreativeTab(null).setBlockTextureName("endplus:stoneMoss");
-        this.mossStairs = new BlockMossyCobblestoneStairs(this.mossStone, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("mossStairs");
+        //this.mossStone = new BlockBase(Material.rock).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundTypePiston).setBlockName("stoneMoss2").setCreativeTab(null).setBlockTextureName("endplus:stoneMoss");
+        this.mossStairs = new BlockMossyCobblestoneStairs(Blocks.mossy_cobblestone, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("mossStairs");
         this.bPlacer = new BlockPlacer().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockPlacer").setTickRandomly(true).setHardness(0.5F);
         this.Enderblock = new BlockEnder(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("Enderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.EnchEnderblock = new BlockEnder(true).setCreativeTab(EndPlus.tabEndplus).setBlockName("EnchEnderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
@@ -209,6 +216,9 @@ public class EndBlocks {
         this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(0.8F);
         this.enchGrass = new BlockEnchGrass(Material.grass).setBlockName("enchGrass").setHardness(1.6F).setCreativeTab(EndPlus.tabEndplus).setTickRandomly(true);
         this.golderaldOre = new BlockGolderaldOre(Material.rock).setBlockTextureName("endplus:oreGolderald").setCreativeTab(EndPlus.tabEndplus).setBlockName("golderaldOre").setHardness(1.5F).setResistance(15.0F);
+        this.chiseledStone = new BlockBase(Material.rock).setBlockTextureName("endplus:stoneslab_top").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockChiseledStone").setHardness(0.8F);
+        this.stoneSlab = new BlockCustomSlab(false, Material.rock).setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("endplus:stone").setLightOpacity(0).setBlockName("smoothStoneSlab");
+        this.doubleStoneSlab = new BlockCustomSlab(true, Material.rock).setCreativeTab(null).setBlockTextureName("endplus:stone").setBlockName("smoothDoubleStoneSlab");
     }
     public void setupHarvestLevels()
     {
