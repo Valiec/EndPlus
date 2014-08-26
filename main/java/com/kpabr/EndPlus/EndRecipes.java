@@ -112,6 +112,8 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.chiseledStone, 1), new Object[]{"X", "X", 'X', Blocks.stone_slab});
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.stoneSlab, 12), new Object[]{"XXX", "XXX", 'X', Blocks.stone});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.questCompass, 1), new Object[]{" X ", "XYX", " X ", 'X', Items.iron_ingot, 'Y', Items.emerald});
+        
     }
     public void setupShapelessCrafting()
     {

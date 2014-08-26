@@ -16,7 +16,6 @@ public class TextureQuestCompass extends TextureAtlasSprite {
     
 	public TextureQuestCompass(String p_i1286_1_) {
 		super(p_i1286_1_);
-		System.out.println("SALVE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,7 +35,6 @@ public class TextureQuestCompass extends TextureAtlasSprite {
     
 	public void updateCompass(World p_94241_1_, double p_94241_2_, double p_94241_4_, double p_94241_6_, boolean p_94241_8_, boolean p_94241_9_)
     {
-		System.out.println("HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         if (!this.framesTextureData.isEmpty())
         {
             double d3 = 0.0D;

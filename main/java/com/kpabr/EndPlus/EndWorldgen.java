@@ -43,11 +43,12 @@ public class EndWorldgen {
         DimensionManager.registerDimension(dimID, dimID);
         GameRegistry.registerWorldGenerator(enderblock, 1);
         BiomeGenEnchHills eh = new BiomeGenEnchHills(80, 0);
-        BiomeEntry eeh = new BiomeEntry(eh, 10);
+        BiomeEntry eeh = new BiomeEntry(eh, 50);
+        
         BiomeManager.warmBiomes.add(eeh);
-        BiomeManager.desertBiomes.add(eeh);
-        BiomeManager.coolBiomes.add(eeh);
-        BiomeManager.icyBiomes.add(eeh);
+        //BiomeManager.desertBiomes.add(eeh);
+        //BiomeManager.coolBiomes.add(eeh);
+        //BiomeManager.icyBiomes.add(eeh);
         //BiomeManager.
         BiomeDictionary.registerBiomeType(eh, Type.FOREST);
         BiomeManager.addSpawnBiome(eh);
