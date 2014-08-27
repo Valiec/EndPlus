@@ -26,7 +26,7 @@ import static net.minecraftforge.event.terraingen.OreGenEvent.GenerateMinable.Ev
 import net.minecraftforge.common.*;
 import net.minecraftforge.event.terraingen.*;
 
-public class BiomeModdedDecorator extends BiomeDecorator
+public class BiomeModdedDecorator2 extends BiomeDecorator
 {
     // JAVADOC FIELD $$ field_76815_a
     public World currentWorld;
@@ -96,7 +96,7 @@ public class BiomeModdedDecorator extends BiomeDecorator
     public boolean generateLakes;
     private static final String __OBFID = "CL_00000164";
 
-    public BiomeModdedDecorator()
+    public BiomeModdedDecorator2()
     {
         this.sandGen = new WorldGenSand(Blocks.sand, 7);
         this.gravelAsSandGen = new WorldGenSand(Blocks.gravel, 6);
@@ -173,7 +173,7 @@ public class BiomeModdedDecorator extends BiomeDecorator
             this.gravelAsSandGen.generate(this.currentWorld, this.randomGenerator, j, this.currentWorld.getTopSolidOrLiquidBlock(j, k), k);
         }
 
-        i = this.treesPerChunk+10;
+        i = 0;//this.treesPerChunk+0;
 
         if (this.randomGenerator.nextInt(10) == 110)
         {
@@ -189,15 +189,15 @@ public class BiomeModdedDecorator extends BiomeDecorator
             k = this.chunk_X + this.randomGenerator.nextInt(16) + 8;
             l = this.chunk_Z + this.randomGenerator.nextInt(16) + 8;
             i1 = this.currentWorld.getHeightValue(k, l);
-            //WorldGenModdedTree worldgenabstracttree = new WorldGenBigTreeModded(false);
-            //worldgenabstracttree.setScale(1.0D, 1.0D, 1.0D);
-            //if(this.randomGenerator.nextInt(10) == 0)
-            //{
-            //if (worldgenabstracttree.generate(this.currentWorld, this.randomGenerator, k, i1, l))
-            //{
-            //    worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
-            //}
-            //}
+            WorldGenModdedTree worldgenabstracttree = new WorldGenBigTreeModded(false);
+            worldgenabstracttree.setScale(1.0D, 1.0D, 1.0D);
+            if(this.randomGenerator.nextInt(10) == 0)
+            {
+            if (worldgenabstracttree.generate(this.currentWorld, this.randomGenerator, k, i1, l))
+            {
+                worldgenabstracttree.func_150524_b(this.currentWorld, this.randomGenerator, k, i1, l);
+            }
+            }
             WorldGenModdedForest worldgenabstracttree2 = (new WorldGenModdedForest(false, true));
             worldgenabstracttree2.setScale(1.0D, 1.0D, 1.0D);
             worldgenabstracttree2.generate(this.currentWorld, this.randomGenerator, k, i1, l);

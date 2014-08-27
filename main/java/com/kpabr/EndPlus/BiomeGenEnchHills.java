@@ -10,6 +10,7 @@ import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenBigMushroom;
 import net.minecraft.world.gen.feature.WorldGenCanopyTree;
@@ -29,8 +30,8 @@ public class BiomeGenEnchHills extends BiomeGenBase
         this.setHeight(BiomeGenBase.height_LowHills);
         this.topBlock = EndPlus.blocks.enchGrass;
         this.theBiomeDecorator.treesPerChunk = 0;
-        this.theBiomeDecorator.grassPerChunk = 40;
-        this.theBiomeDecorator.flowersPerChunk = 20;
+        this.theBiomeDecorator.grassPerChunk = 0;
+        this.theBiomeDecorator.flowersPerChunk = 0;
         this.theBiomeDecorator.generateLakes = true;
         this.fillerBlock = Blocks.dirt;
         this.rainfall = 0.68F;
