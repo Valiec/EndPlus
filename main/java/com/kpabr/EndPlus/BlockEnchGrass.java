@@ -48,7 +48,7 @@ class BlockEnchGrass extends Block
         public ArrayList getDrops(World world, int x, int y, int z, int metadata, int fortune)
         {
             ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-            drops.add(new ItemStack(EndPlus.blocks.endDirt,1));
+            drops.add(new ItemStack(Blocks.dirt,1));
             return drops;
         }
         @Override

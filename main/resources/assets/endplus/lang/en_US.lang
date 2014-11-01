@@ -1,4 +1,17 @@
-tile.infusedQuartzBlock.name=Block of Infused Quartz
+tile.enchBirchLog.name=Enchanted Birch Wood
+tile.enchOakLog.name=Enchanted Oak Wood
+tile.enchLeavesBirch.name=Enchanted Birch Leaves
+tile.enchLeaves.name=Enchanted Oak Leaves
+tile.enchBirchSapling.name=Enchanted Birch Sapling
+tile.enchSapling.name=Enchanted Oak Sapling
+item.questCompass.name=Quest Compass
+item.golderaldGem.name=Golderald Gem
+tile.smoothStoneSlab.name=Smooth Stone Slab
+tile.blockChiseledStone.name=Chiseled Stone
+tile.golderaldOre.name=Golderald Ore
+tile.enchGrass.name=Enchanted Grass
+
+tile.blockInfusedQuartz.name=Block of Infused Quartz
 
 item.infusedQuartzChestplate.name=Infused Quartz Chestplate
 item.infusedQuartzBoots.name=Infused Quartz Boots
@@ -143,7 +156,7 @@ tile.flameriteOre.name=Flamerite Ore
 item.flameriteIngot.name=Flamerite Ingot
 item.gflameriteIngot.name=Flamerite-Gold Ingot
 
-entity.Dragonfire.name=Dragonfire
+entity.Endergeist.name=Endergeist
 
 tile.zombieSpawner.name=Zombie Spawner
 tile.skeletonSpawner.name=Skeleton Spawner
@@ -168,7 +181,7 @@ tile.wolfSpawner.name=Wolf Spawner
 tile.villagerSpawner.name=Villager Spawner
 tile.slimeSpawner.name=Slime Spawner
 tile.magmaCubeSpawner.name=Magma Cube Spawner
-tile.dragonfireSpawner.name=Dragonfire Spawner
+tile.EndergeistSpawner.name=Endergeist Spawner
 tile.batSpawner.name=Bat Spawner
 
 

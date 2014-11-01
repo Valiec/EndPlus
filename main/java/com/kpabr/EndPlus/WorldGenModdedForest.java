@@ -115,7 +115,7 @@ public class WorldGenModdedForest extends WorldGenModdedTree
                                         //System.out.println("E");
                                     	if(birch)
                                     	{
-                                        this.setBlockAndNotifyAdequately(p_76484_1_, l2, k2, i2, EndPlus.blocks.enchLeavesGen, 2);
+                                        this.setBlockAndNotifyAdequately(p_76484_1_, l2, k2, i2, EndPlus.blocks.enchLeavesBirchGen, 2);
                                     	}
                                     	else
                                     	{
@@ -136,11 +136,11 @@ public class WorldGenModdedForest extends WorldGenModdedTree
                             //System.out.println("F");
                             if(birch)
                             {
-                            	this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k2, p_76484_5_, Blocks.log, 2);
+                            	this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k2, p_76484_5_, EndPlus.blocks.enchBirchLog, 0);
                             }
                             else
                             {
-                            	this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k2, p_76484_5_, Blocks.log, 0);	
+                            	this.setBlockAndNotifyAdequately(p_76484_1_, p_76484_3_, p_76484_4_ + k2, p_76484_5_, EndPlus.blocks.enchOakLog, 0);	
                             }
                         }
                     }

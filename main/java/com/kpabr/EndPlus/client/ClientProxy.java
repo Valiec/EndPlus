@@ -7,10 +7,7 @@ package com.kpabr.EndPlus.client;
 import com.kpabr.EndPlus.CommonProxy;
 import com.kpabr.EndPlus.EndRenderHandler;
 import com.kpabr.EndPlus.EntityDragonfire;
-import com.kpabr.EndPlus.EntityHerobrine;
-import com.kpabr.EndPlus.ModelHerobrine;
 import com.kpabr.EndPlus.RenderDragonfire;
-import com.kpabr.EndPlus.RenderHerobrine;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.client.model.ModelBiped;
@@ -25,7 +22,6 @@ public class ClientProxy extends CommonProxy {
             
                 RenderingRegistry.registerEntityRenderingHandler(EntityDragonfire.class, new RenderDragonfire(new ModelBiped(), 0.5F));
 //the 0.5F is the shadowsize
-                RenderingRegistry.registerEntityRenderingHandler(EntityHerobrine.class, new RenderHerobrine(new ModelHerobrine(), 0.5F));
                 RenderingRegistry.registerBlockHandler(500, erh);
         }
         
