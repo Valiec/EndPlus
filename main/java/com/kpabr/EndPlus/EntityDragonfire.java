@@ -5,6 +5,7 @@ import java.util.Calendar;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EnumCreatureAttribute;
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
@@ -13,8 +14,10 @@ import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 /*
@@ -41,6 +44,34 @@ public class EntityDragonfire extends EntityMob
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
     }
+	/**
+     * Get this Entity's EnumCreatureAttribute
+     */
+	@Override
+    public EnumCreatureAttribute getCreatureAttribute()
+    {
+        return EnumCreatureAttribute.UNDEAD;
+    }
+	public IEntityLivingData onSpawnWithEgg(IEntityLivingData p_110161_1_)
+    {
+        p_110161_1_ = super.onSpawnWithEgg(p_110161_1_);
+
+        this.setCanPickUpLoot(this.rand.nextFloat() < 0.55F * this.worldObj.func_147462_b(this.posX, this.posY, this.posZ));
+
+        if (this.getEquipmentInSlot(4) == null)
+        {
+            Calendar calendar = this.worldObj.getCurrentDate();
+
+            if (calendar.get(2) + 1 == 10 && calendar.get(5) == 31 && this.rand.nextFloat() < 0.25F)
+            {
+                this.setCurrentItemOrArmor(4, new ItemStack(this.rand.nextFloat() < 0.1F ? Blocks.lit_pumpkin : Blocks.pumpkin));
+                this.equipmentDropChances[4] = 0.0F;
+            }
+        }
+
+        return p_110161_1_;
+    }
+
 	@Override
 	protected void applyEntityAttributes()
     {

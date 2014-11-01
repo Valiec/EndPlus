@@ -1,20 +1,29 @@
 package com.kpabr.EndPlus;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.UnknownHostException;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.util.ChatComponentText;
+import net.minecraftforge.common.config.Configuration;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
+import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 
 public class EndVersionChecker {
-    public int getNewestVersionID(boolean debug) throws UnknownHostException, IOException
+	public boolean doUpdate;
+    public int getNewestVersionID(boolean debug) throws IOException
     {
         int newestVersion = -1;
         URL check;
@@ -39,6 +48,25 @@ public class EndVersionChecker {
         {
             return newestVersion; 
         }
+    }
+    @SubscribeEvent
+    public void downloadNewestVersion(PlayerEvent.PlayerLoggedOutEvent event) throws UnknownHostException, IOException
+    {
+    	if(true)
+    	{
+	        File oldf = new File("newest.jar");
+	        oldf.renameTo(new File("newest.jar.backup"));
+	        URL dl;
+	        dl = new URL("http://www.kpabr.com/mcmods/endplus/latest2");
+	        ReadableByteChannel channel = Channels.newChannel(dl.openStream());
+	        FileOutputStream output = new FileOutputStream("newest.jar");
+	        String cwd = new java.io.File( "." ).getCanonicalPath(); //debug
+	        System.out.println(cwd); //debug
+	        output.getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
+	        output.close();
+    	}
+        
+        
     }
     public String getNewestVersionNumber() throws UnknownHostException, IOException
     {

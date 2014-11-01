@@ -25,11 +25,11 @@ import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockEnchLeaves extends BlockLeaves {
+public class BlockEnchLeavesBirch extends BlockLeaves {
     String[] type  = {"ender"};
     IIcon blockIconFast;
     boolean doDecay;
-    protected BlockEnchLeaves(boolean par1)
+    protected BlockEnchLeavesBirch(boolean par1)
     {
         super();
         this.doDecay = par1;
@@ -62,9 +62,10 @@ public class BlockEnchLeaves extends BlockLeaves {
         this.blockIcon = iconRegister.registerIcon("EndPlus:leaves_ench");
         this.blockIconFast = iconRegister.registerIcon("EndPlus:leaves_ench_opaque"); 
     }
+    @Override
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return Item.getItemFromBlock(EndPlus.blocks.enchSapling);
+        return Item.getItemFromBlock(EndPlus.blocks.enchBirchSapling);
     }
 
     @Override
@@ -147,25 +148,4 @@ public class BlockEnchLeaves extends BlockLeaves {
         }
         world.setBlockMetadataWithNotify(x, y, z, world.getBlockMetadata(x, y, z) | 8, 4);
     }
-    @Override
-   
-    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity)
-    {
-        if (entity instanceof EntityWither)
-        {
-            return true;
-           // return blockID != Block.bedrock.blockID && blockID != Block.endPortal.blockID && blockID != Block.endPortalFrame.blockID;
-        }
-        else if (entity instanceof EntityDragon)
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-   
-    
- 
-
 }

@@ -233,6 +233,6 @@ public class EndItems {
         this.golderaldGem = new ItemGolderaldGem().setTextureName("endplus:gemGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldGem");
         this.stoneSlab = new ItemBlockStoneSlab(Blocks.stone).setCreativeTab(EndPlus.tabEndplus);
         
-        this.questCompass = new ItemQuestCompass().setTextureName("endplus:questcompass").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldGem");
+        this.questCompass = new ItemQuestCompass().setTextureName("endplus:questcompass").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("questCompass");
     }
 }

@@ -29,12 +29,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class EndWorldgen {
     /*World Generator Declaration*/
     EndOregen enderblock = new EndOregen();
+    public int dimID = 6;
     public void setupWorldgen()
     {
         
-        EndPlus.config.load();
-        int dimID = 6;
-        dimID = EndPlus.config.get(Configuration.CATEGORY_GENERAL, "OverrideDimensionID", 6).getInt();
+       
         /*Setting up worldgen*/
         WorldServer world = DimensionManager.getWorld(1);
         //DimensionManager.unregisterProviderType(1);
@@ -56,7 +55,7 @@ public class EndWorldgen {
         {
         	if(biome != eh)
         	{
-        	BiomeManager.removeSpawnBiome(biome);
+        	//BiomeManager.removeSpawnBiome(biome);
         	}
         }
     }

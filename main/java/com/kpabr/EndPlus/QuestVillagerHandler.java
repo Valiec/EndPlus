@@ -195,7 +195,7 @@ public class QuestVillagerHandler implements IVillageTradeHandler{
         //System.out.println(EndPlus.mobs.qdh.questX);
         //System.out.println(EndPlus.mobs.qdh.questY);
         //System.out.println(EndPlus.mobs.qdh.questZ);
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("x: "+EndPlus.mobs.qdh.questX+", y: "+EndPlus.mobs.qdh.questY+", z: "+EndPlus.mobs.qdh.questZ));
+        //Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("x: "+EndPlus.mobs.qdh.questX+", y: "+EndPlus.mobs.qdh.questY+", z: "+EndPlus.mobs.qdh.questZ));
         this.genStructureSupport(villager, random);
         }
         else

@@ -6,6 +6,9 @@ package com.kpabr.EndPlus;
  * currently using Minecraft Forge 10.12.0.1022
  */
 
+import java.io.IOException;
+import java.net.UnknownHostException;
+
 import com.kpabr.EndPlus.CommonProxy;
 
 import net.minecraft.block.material.Material;
@@ -16,6 +19,7 @@ import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
+import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -27,7 +31,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import cpw.mods.fml.relauncher.Side;
-@Mod(modid = EndPlus.MODID, version = EndPlus.VERSION, name = EndPlus.NAME)
+@Mod(modid = EndPlus.MODID, version = EndPlus.VERSION, name = EndPlus.NAME, guiFactory = "com.kpabr.EndPlus.EndPlusConfigGUIFactory")
 public class EndPlus
 {
     @SidedProxy(clientSide="com.kpabr.EndPlus.client.ClientProxy", serverSide="com.kpabr.EndPlus.CommonProxy")
@@ -79,7 +83,16 @@ public class EndPlus
         
         ClientCommandHandler.instance.registerCommand(new TestCommand());
         ClientCommandHandler.instance.registerCommand(new EndPlusCommand());
-        //ClientCommandHandler.instance.registerCommand(new QuestCommand());
+   	    EndPlus.config.load();
+        if(!config.hasKey(Configuration.CATEGORY_GENERAL, "OverrideDimensionID"))
+        {
+        worldgen.dimID = EndPlus.config.getInt("OverrideDimensionID", Configuration.CATEGORY_GENERAL, EndPlus.config.get(Configuration.CATEGORY_GENERAL, "OverrideDimensionID", 6).getInt(), 2, 255, "Used to help generate the End");
+        }
+        if(!config.hasKey(Configuration.CATEGORY_GENERAL, "AutoUpdate"))
+        {
+        EndPlus.config.getBoolean("AutoUpdate", Configuration.CATEGORY_GENERAL, true, "Sets whether the auto-upater will run");
+        }
+        EndPlus.config.save();
 
         
         
@@ -98,6 +111,26 @@ public class EndPlus
      	mobs.setupMobs();
      	proxy.registerRenderers();
      	VillagerRegistry.instance().getRegisteredVillagers(); //Does nothing at this time, to be used for quest villager   
-    }   
+    }
+    @EventHandler
+    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
+    {
+        if(true)//event.modID.equals("endplus"))
+        {
+            updateConfig();
+        }
+    }
+    public static void updateConfig()
+    {
+    	System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!one!!!!!!!!!!!!!!!!!!!!!!!!!1!!one!!!!1");
+         worldgen.dimID = EndPlus.config.get(Configuration.CATEGORY_GENERAL, "OverrideDimensionID", 6).getInt();
+         //versionChecker.doUpdate = 
+         System.out.println(EndPlus.config.get(Configuration.CATEGORY_GENERAL, "AutoUpdate", false));
+         
+         if(true)
+         {
+             config.save();
+         }
+    }
 }
 

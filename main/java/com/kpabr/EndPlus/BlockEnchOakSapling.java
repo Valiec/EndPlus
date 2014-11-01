@@ -5,6 +5,7 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -24,7 +25,7 @@ import net.minecraft.world.gen.feature.WorldGenSavannaTree;
 import net.minecraft.world.gen.feature.WorldGenTaiga2;
 import net.minecraft.world.gen.feature.WorldGenTrees;
 
-public class BlockEnderSapling extends BlockSapling {
+public class BlockEnchOakSapling extends BlockSapling {
 
     public static final String[] field_149882_a = new String[] {"ender"};
     private static final IIcon[] field_149881_b = new IIcon[field_149882_a.length];
@@ -46,13 +47,13 @@ public class BlockEnderSapling extends BlockSapling {
         //if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(p_149878_1_, p_149878_5_, p_149878_2_, p_149878_3_, p_149878_4_)) return;
         int l = p_149878_1_.getBlockMetadata(p_149878_2_, p_149878_3_, p_149878_4_) & 7;
         l = 1; //TODO test
-        WorldGenEnderTree object;
+        WorldGenEnchTree object;
         int i1 = p_149878_2_;
         int k1 = p_149878_3_;
         int j1 = p_149878_4_;
         boolean flag = false;
-
-        object = new WorldGenEnderTree(false, 8, EndPlus.blocks.endLog, EndPlus.blocks.endLeavesGen, false);
+        int r = p_149878_5_.nextInt(4);
+        object = new WorldGenEnchTree(false, 8, EndPlus.blocks.enchOakLog, 0, EndPlus.blocks.enchLeavesGen, 0, false);
         object.generate(p_149878_1_, p_149878_5_, i1, k1, j1);
         flag = true;
     }
@@ -65,7 +66,7 @@ public class BlockEnderSapling extends BlockSapling {
     {
         for (int i = 0; i < field_149881_b.length; ++i)
         {
-            field_149881_b[i] = p_149651_1_.registerIcon("endplus:sapling_ender");
+            field_149881_b[i] = p_149651_1_.registerIcon("endplus:sapling_ench_oak");
         }
     }
     @SideOnly(Side.CLIENT)

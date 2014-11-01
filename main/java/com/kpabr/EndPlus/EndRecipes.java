@@ -77,6 +77,7 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(Blocks.monster_egg, 4, 1), new Object[]{" X ", "XYX", " X ", 'X', Blocks.cobblestone, 'Y', EndPlus.items.umbriteCrystal});
         GameRegistry.addRecipe(new ItemStack(Blocks.monster_egg, 4, 2), new Object[]{" X ", "XYX", " X ", 'X', Blocks.stonebrick, 'Y', EndPlus.items.umbriteCrystal});
         GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.enderiteBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', EndPlus.items.enderiteGem});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.golderaldBlock, 1), new Object[]{"XXX", "XXX", "XXX", 'X', EndPlus.items.golderaldGem});
         
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.chestplateGFlamerite, 1), new Object[]{"X X", "XXX", "XXX", 'X', EndPlus.items.gflameriteIngot});
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.legsGFlamerite, 1), new Object[]{"XXX", "X X", "X X", 'X', EndPlus.items.gflameriteIngot});
@@ -120,10 +121,13 @@ public class EndRecipes {
         /*Registering shapeless crafting recipes in GameRegistry*/
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Items.arrow});
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 5), new Object[]{EndPlus.blocks.endLog});
+        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 0), new Object[]{EndPlus.blocks.enchOakLog});
+        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 2), new Object[]{EndPlus.blocks.enchBirchLog});
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3, 4), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Items.gunpowder});
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3, 2), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Items.rotten_flesh});
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3, 3), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Blocks.cobblestone});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.flameriteIngot, 9), new Object[]{EndPlus.blocks.flameriteBlock});
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.golderaldGem, 9), new Object[]{EndPlus.blocks.golderaldBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.umbriteCrystal, 9), new Object[]{EndPlus.blocks.umbriteBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.luciteCrystal, 9), new Object[]{EndPlus.blocks.luciteBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.gflameriteIngot, 9), new Object[]{EndPlus.blocks.blockGoldFlamerite});
@@ -179,6 +183,9 @@ public class EndRecipes {
         /*Registering smelting recipes in GameRegistry*/
         GameRegistry.addSmelting(EndPlus.blocks.flameriteOre, new ItemStack(EndPlus.items.flameriteIngot, 1) , 0.6F);
         GameRegistry.addSmelting(EndPlus.blocks.enderiteOre, new ItemStack(EndPlus.items.enderiteGem, 1) , 0.6F);
+        GameRegistry.addSmelting(EndPlus.blocks.umbriteOre, new ItemStack(EndPlus.items.umbriteCrystal, 1) , 0.6F);
+        GameRegistry.addSmelting(EndPlus.blocks.luciteOre, new ItemStack(EndPlus.items.luciteCrystal, 1) , 0.6F);
+        GameRegistry.addSmelting(EndPlus.blocks.golderaldOre, new ItemStack(EndPlus.items.golderaldGem, 1) , 0.6F);
         GameRegistry.addSmelting(EndPlus.items.enderWart, new ItemStack(EndPlus.items.enderWartCooked, 1) , 0.2F);
         GameRegistry.addSmelting(EndPlus.blocks.endLog, new ItemStack(Items.coal, 1, 1) , 0.15F);
         
