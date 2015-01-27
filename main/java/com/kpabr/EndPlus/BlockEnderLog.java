@@ -28,7 +28,6 @@ public class BlockEnderLog extends BlockNewLog {
     protected BlockEnderLog()
     {
         super();
-        // TODO Auto-generated constructor stub
     }
     
     @Override
@@ -40,7 +39,6 @@ public class BlockEnderLog extends BlockNewLog {
         if (entity instanceof EntityWither)
         {
             return true;
-           // return blockID != Block.bedrock.blockID && blockID != Block.endPortal.blockID && blockID != Block.endPortalFrame.blockID;
         }
         else if (entity instanceof EntityDragon)
         {

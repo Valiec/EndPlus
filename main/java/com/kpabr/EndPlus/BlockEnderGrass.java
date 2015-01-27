@@ -72,7 +72,6 @@ class BlockEnderGrass extends Block
             if (entity instanceof EntityWither)
             {
                 return true;
-               // return blockID != Block.bedrock.blockID && blockID != Block.endPortal.blockID && blockID != Block.endPortalFrame.blockID;
             }
             else if (entity instanceof EntityDragon)
             {

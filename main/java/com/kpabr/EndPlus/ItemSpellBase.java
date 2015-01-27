@@ -22,7 +22,6 @@ public class ItemSpellBase extends Item {
 		super();
 		this.light = isLight;
 		
-		//EndPlus.spawnerData[23][1] = this;
 		
 	}
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
@@ -41,16 +40,13 @@ public class ItemSpellBase extends Item {
     	    }
     	    else
     	    {
-            	par3EntityPlayer.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 7200, 1, true));
-            	par3EntityPlayer.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 7200, 1, true));
+            	par3EntityPlayer.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 7200, 0, true));
+            	par3EntityPlayer.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 7200, 0, true));
     	    }
 	    }
 	    par3EntityPlayer.addExperience(-3);
 	    par1ItemStack.stackSize--;
 	    return par1ItemStack;
 	}
-	/*public void registerIcons(IIconRegister iconRegister) {
-        this.itemIcon = iconRegister.registerIcon("EndPlus:gemEnderite");
-    }*/
 
 }

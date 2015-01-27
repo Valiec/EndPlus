@@ -40,16 +40,6 @@ public class BlockEnder extends Block{
             var15 = ((double)p_149734_5_.nextFloat() - 0.5D) * 2.0F * (float)var19;
             var17 = ((double)p_149734_5_.nextFloat() - 0.5D) * 2.0F * (float)var19;
 
-            /*if (p_149734_1_.getBlock(p_149734_2_ - 1, p_149734_3_, p_149734_4_) != this && p_149734_1_.getBlock(p_149734_2_ + 1, p_149734_3_, p_149734_4_) != this)
-            {
-                var7 = (double)p_149734_2_ + 0.5D + 0.25D * (double)var19;
-                var13 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19);
-            }*/
-            //else
-            //{
-                //var11 = (double)p_149734_4_ + 0.5D + 0.25D * (double)var19;
-                //var17 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19); //FIX FOR OTHER DIRECTIONS var13,var15,var17=MOTION
-            //}
 
             p_149734_1_.spawnParticle("portal", var7, var9, var11, var13, var15, var17);
         }

@@ -40,8 +40,8 @@ class BlockEnchGrass extends Block
         }
         @Override
         public void registerBlockIcons(IIconRegister iconRegister) {
-            this.side = iconRegister.registerIcon("EndPlus:enchGrass_side3");
-            this.bottom = iconRegister.registerIcon("EndPlus:dirt");
+            this.side = iconRegister.registerIcon("EndPlus:enchGrass_side");
+            this.bottom = iconRegister.registerIcon("minecraft:dirt");
             this.blockIcon = iconRegister.registerIcon("EndPlus:enchGrass_top");
         }
         @Override

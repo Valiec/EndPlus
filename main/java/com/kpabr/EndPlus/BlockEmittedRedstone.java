@@ -47,17 +47,7 @@ public class BlockEmittedRedstone extends Block {
             var13 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
             var15 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
             var17 = ((double)p_149734_5_.nextFloat() - 0.5D) * 0.5D;
-
-            /*if (p_149734_1_.getBlock(p_149734_2_ - 1, p_149734_3_, p_149734_4_) != this && p_149734_1_.getBlock(p_149734_2_ + 1, p_149734_3_, p_149734_4_) != this)
-            {
-                var7 = (double)p_149734_2_ + 0.5D + 0.25D * (double)var19;
-                var13 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19);
-            }*/
-            //else
-            //{
-                var11 = (double)p_149734_4_ + 0.5D + 0.25D * (double)var19;
-                //var17 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)var19); //FIX FOR OTHER DIRECTIONS var13,var15,var17=MOTION
-            //}
+            var11 = (double)p_149734_4_ + 0.5D + 0.25D * (double)var19;
 
             p_149734_1_.spawnParticle("portal", var7, var9, var11, var13, var15, var17);
         }
@@ -65,7 +55,7 @@ public class BlockEmittedRedstone extends Block {
     
     public void randomDissssplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
     {
-            int l = 8;//p_149734_1_.getBlockMetadata(p_149734_2_, p_149734_3_, p_149734_4_);
+            int l = 8;
             double d0 = (double)((float)p_149734_2_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
             double d1 = (double)((float)p_149734_3_ + 0.7F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
             double d2 = (double)((float)p_149734_4_ + 0.5F) + (double)(p_149734_5_.nextFloat() - 0.5F) * 0.2D;
@@ -136,10 +126,5 @@ public class BlockEmittedRedstone extends Block {
         }
     }
     
-    /*@Override
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
-        this. = iconRegister.registerIcon("EndPlus:enderiteOre");
-    }*/
 
 }

@@ -30,9 +30,7 @@ public class BlockCavernStone extends Block {
     
 	public BlockCavernStone(Material par2Material) {
 		super(par2Material);
-		// TODO Auto-generated constructor stub
 	}
-	//@Override
 	
 	@Override
     public int quantityDropped(Random par1Random)
@@ -162,10 +160,5 @@ public class BlockCavernStone extends Block {
     {
         return true;
     }
-	/*@Override
-    @SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister) {
-        this. = iconRegister.registerIcon("EndPlus:enderiteOre");
-    }*/
 
 }

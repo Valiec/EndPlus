@@ -131,7 +131,7 @@ public class BlockEnderRedstoneOre extends Block {
 	            this.func_150186_mno(p_149734_1_, p_149734_2_, p_149734_3_, p_149734_4_, new Random());
 	        }
 	    }
-
+	    @SideOnly(Side.CLIENT)
 	    private void func_150186_mno(World p_150186_1_, int p_150186_2_, int p_150186_3_, int p_150186_4_, Random p_149734_5_)
 	    {
 	        Random random = p_150186_1_.rand;

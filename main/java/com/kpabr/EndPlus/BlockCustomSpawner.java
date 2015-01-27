@@ -63,8 +63,8 @@ class BlockCustomSpawner extends BlockMobSpawner {
     
     
     
-    public void registerIcons(IIconRegister iconRegister) { // NO_UCD (unused code)
-        this.blockIcon = iconRegister.registerIcon("EndPlus:zombieSpawner");
+    public void registerIcons(IIconRegister iconRegister) {
+        this.blockIcon = iconRegister.registerIcon("EndPlus:customSpawner");
     }
 
 }

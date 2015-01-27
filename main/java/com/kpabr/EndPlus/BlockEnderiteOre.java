@@ -22,7 +22,6 @@ public class BlockEnderiteOre extends Block {
 
 	public BlockEnderiteOre(Material par2Material) {
 		super(par2Material);
-		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public Item getItemDropped(int par1, Random par2Random, int par3)
@@ -47,10 +46,5 @@ public class BlockEnderiteOre extends Block {
 
         return true;
     }
-	/*@Override
-    @SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister) {
-        this. = iconRegister.registerIcon("EndPlus:enderiteOre");
-    }*/
 
 }

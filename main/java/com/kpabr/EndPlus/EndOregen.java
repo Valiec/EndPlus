@@ -61,6 +61,13 @@ public class EndOregen implements IWorldGenerator
                    int k = world.getTopSolidOrLiquidBlock(i, j);
                    (new WorldGenEnderSpikes(EndPlus.blocks.endGrass)).generate(world, random, i, k, j);
                }
+               if (random.nextInt(15) == 0)
+               {
+                   int i = x + random.nextInt(16) + 8;
+                   int j = z + random.nextInt(16) + 8;
+                   int k = world.getTopSolidOrLiquidBlock(i, j);
+                   (new WorldGenEnderStructure(EndPlus.blocks.endGrass)).generate(world, random, i, k, j);
+               }
                if(random.nextInt(3) == 0)
                {
                    int Xcoord1 = x + random.nextInt(16);

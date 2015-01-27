@@ -20,6 +20,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import java.util.Random;
 /*
  * Created by Valiec2019
  * on February 18, 2014
@@ -30,12 +31,15 @@ public class EntityDragonfire extends EntityMob
 	
     private String texture;
 	private double moveSpeed;
+	private float num;
 
 	public EntityDragonfire(World par1World)
     {
         super(par1World);
-        this.setSize(1.0F, 2.0F);
-        this.moveSpeed = 0.58D;
+        Random rand = new Random();
+        this.num = 1;//Float.parseFloat(Double.toString(((rand.nextInt(5))/2.0)));
+        this.setSize(((1.0F)*(this.num)), (2.0F*this.num));
+        this.moveSpeed = 0.58D/this.num;
         this.tasks.addTask(0, new EntityAISwimming(this));
         //this.tasks.addTask(1, new EntityAIBreakDoor(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, true));
@@ -78,7 +82,7 @@ public class EntityDragonfire extends EntityMob
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(12.0D);
         this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.45D);
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(4.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(4.0D);//*num);
     }
 	@Override
 	protected boolean isAIEnabled()

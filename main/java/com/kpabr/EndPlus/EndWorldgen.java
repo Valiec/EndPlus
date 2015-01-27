@@ -36,28 +36,15 @@ public class EndWorldgen {
        
         /*Setting up worldgen*/
         WorldServer world = DimensionManager.getWorld(1);
-        //DimensionManager.unregisterProviderType(1);
         DimensionManager.registerProviderType(dimID, WorldProviderEnder.class, true);
-        //DimensionManager.registerProviderType(dimID, WorldProviderEnder.class, true);
         DimensionManager.registerDimension(dimID, dimID);
         GameRegistry.registerWorldGenerator(enderblock, 1);
         BiomeGenEnchHills eh = new BiomeGenEnchHills(80, 0);
         BiomeEntry eeh = new BiomeEntry(eh, 50);
         
         BiomeManager.warmBiomes.add(eeh);
-        //BiomeManager.desertBiomes.add(eeh);
-        //BiomeManager.coolBiomes.add(eeh);
-        //BiomeManager.icyBiomes.add(eeh);
-        //BiomeManager.
         BiomeDictionary.registerBiomeType(eh, Type.FOREST);
         BiomeManager.addSpawnBiome(eh);
-        for (BiomeGenBase biome : BiomeGenBase.getBiomeGenArray())
-        {
-        	if(biome != eh)
-        	{
-        	//BiomeManager.removeSpawnBiome(biome);
-        	}
-        }
     }
     
     @SubscribeEvent

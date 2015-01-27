@@ -72,7 +72,10 @@ public class EndItems {
     public static Item golderaldGem;
     public static Item stoneSlab;
     public static Item questCompass;
-    
+    public static Item golderaldWand;
+    public static Item luciteWand;
+    public static Item umbriteWand;
+
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
     static ToolMaterial Flamerite = EnumHelper.addToolMaterial("FLAMERITE", 3, 865, 14.0F, 4, 26);
@@ -157,6 +160,10 @@ public class EndItems {
         //GameRegistry.registerItem(this.stoneSlab, "smooth_stone_slab");
         
         GameRegistry.registerItem(this.questCompass, "quest_compass");
+        
+        GameRegistry.registerItem(this.golderaldWand, "golderald_wand");
+        GameRegistry.registerItem(this.luciteWand, "lucite_wand");
+        GameRegistry.registerItem(this.umbriteWand, "umbrite_wand");
     }
     
     public void setupItems()
@@ -234,5 +241,9 @@ public class EndItems {
         this.stoneSlab = new ItemBlockStoneSlab(Blocks.stone).setCreativeTab(EndPlus.tabEndplus);
         
         this.questCompass = new ItemQuestCompass().setTextureName("endplus:questcompass").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("questCompass");
+        
+        this.golderaldWand = new ItemGolderaldWand(1).setTextureName("endplus:wandGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldWand");
+        this.luciteWand = new ItemGolderaldWand(0).setTextureName("endplus:wandLucite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("luciteWand");
+        this.umbriteWand = new ItemGolderaldWand(2).setTextureName("endplus:wandUmbrite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("umbriteWand");
     }
 }

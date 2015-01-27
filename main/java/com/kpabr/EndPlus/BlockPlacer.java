@@ -31,6 +31,7 @@ import net.minecraft.world.World;
 public class BlockPlacer extends BlockDispenser {
     IIcon side;
    
+    
     public static final IRegistry dispenseBehaviorRegistry = new RegistryDefaulted(new BehaviorPlaceBlock());
     protected BlockPlacer()
     {
@@ -99,6 +100,7 @@ public class BlockPlacer extends BlockDispenser {
         
     }
  // JAVADOC METHOD $$ func_149689_a
+    @SideOnly(Side.CLIENT)
     public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
     {
         int l = BlockPistonBase.determineOrientation(p_149689_1_, p_149689_2_, p_149689_3_, p_149689_4_, p_149689_5_);
@@ -110,6 +112,7 @@ public class BlockPlacer extends BlockDispenser {
         }
     }
 
+    @SideOnly(Side.CLIENT)
     public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
     {
         if (p_149727_1_.isRemote)
@@ -128,6 +131,7 @@ public class BlockPlacer extends BlockDispenser {
             return true;
         }
     }
+    @SideOnly(Side.CLIENT)
     public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
     {
         boolean flag = p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_) || p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_ + 1, p_149695_4_);
@@ -138,13 +142,12 @@ public class BlockPlacer extends BlockDispenser {
         {
             p_149695_1_.scheduleBlockUpdate(p_149695_2_, p_149695_3_, p_149695_4_, this, this.tickRate(p_149695_1_));
             this.func_149941_e(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_);
-            //p_149695_1_.setBlockMetadataWithNotify(p_149695_2_, p_149695_3_, p_149695_4_, l | 8, 4);
         }
         else if (!flag && flag1)
         {
-            //p_149695_1_.setBlockMetadataWithNotify(p_149695_2_, p_149695_3_, p_149695_4_, l & -9, 4);
         }
     }
+    @SideOnly(Side.CLIENT)
     private void func_149938_m(World p_149938_1_, int p_149938_2_, int p_149938_3_, int p_149938_4_)
     {
         if (!p_149938_1_.isRemote)
@@ -175,17 +178,15 @@ public class BlockPlacer extends BlockDispenser {
                 b0 = 4;
             }
 
-            //p_149938_1_.setBlockMetadataWithNotify(p_149938_2_, p_149938_3_, p_149938_4_, b0, 2);
         }
     }
+    @SideOnly(Side.CLIENT)
     public static double[] func_149937_bc(IBlockSource p_149939_0_)
     {
         int meta = p_149939_0_.getBlockMetadata();
 
         
   
-            //System.out.println("HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            //System.out.println(level);
             int dx = 0;
             int dy = 0;
             int dz = 0;
@@ -291,7 +292,6 @@ public class BlockPlacer extends BlockDispenser {
                 dy = 0;
                 dz = 3;
             }
-            //System.out.println("meta: "+meta);
         EnumFacing enumfacing = func_149937_b(p_149939_0_.getBlockMetadata());
         double d0 = p_149939_0_.getX()-1+dx;
         double d1 = p_149939_0_.getY()+dy;
@@ -300,6 +300,7 @@ public class BlockPlacer extends BlockDispenser {
         return output;
     }
     
+    @SideOnly(Side.CLIENT)
     protected void func_149941_e(World p_149941_1_, int p_149941_2_, int p_149941_3_, int p_149941_4_)
     {
         BlockSourceImpl blocksourceimpl = new BlockSourceImpl(p_149941_1_, p_149941_2_, p_149941_3_, p_149941_4_);
@@ -317,11 +318,7 @@ public class BlockPlacer extends BlockDispenser {
             {
                 ItemStack itemstack = TileEntityDispenser.getStackInSlot(l);
                 IBehaviorDispenseItem ibehaviordispenseitem = new BehaviorPlaceBlock();
-                //IPosition iposition = this.func_149939_a(blocksourceimpl);
-                //double d0 = iposition.getX();
-                //double d1 = iposition.getY();
-                //double d2 = iposition.getZ();
-                if (true)//p_149941_1_.getBlock((int)(d0), (int)(d1), (int)(d2)) == Blocks.air)
+                if (true)
                 {
                     ItemStack itemstack1 = ibehaviordispenseitem.dispense(blocksourceimpl, itemstack);
                     TileEntityDispenser.setInventorySlotContents(l, itemstack1.stackSize == 0 ? null : itemstack1);
@@ -336,6 +333,7 @@ public class BlockPlacer extends BlockDispenser {
         this.blockIcon = iconRegister.registerIcon("endplus:wirelessSide");
         
     }
+    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int i, int j)
     {
                 if(j == i)

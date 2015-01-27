@@ -26,8 +26,7 @@ public class BehaviorPlaceBlock implements IBehaviorDispenseItem{
     }
     protected ItemStack dispenseStack(IBlockSource par1IBlockSource, ItemStack par2ItemStack)
     {
-        //System.out.print("HI!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-        //ItemStack par2bItemStack = par2ItemStack;
+    	
         EnumFacing enumfacing = BlockDispenser.func_149937_b(par1IBlockSource.getBlockMetadata());
         double[] iposition = BlockPlacer.func_149937_bc(par1IBlockSource);
         ItemStack itemstack1 = par2ItemStack.splitStack(1);
@@ -45,18 +44,10 @@ public class BehaviorPlaceBlock implements IBehaviorDispenseItem{
 
     public static boolean doDispense2(World par0World, ItemStack par1ItemStack, int par2, EnumFacing par3EnumFacing, double par4, double par5, double par6, int meta)
     {
-
-
-        //double d0 = par4IPosition.getX();
-        //double d1 = par4IPosition.getY();
-        //double d2 = par4IPosition.getZ();
-        //System.out.print("HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+    	
         System.out.println("ERROR: "+par1ItemStack.getItemDamage()+","+(int)(par4)+","+(int)(par5)+","+(int)(par6)+","); 
         if(par1ItemStack.getItem() instanceof ItemBlock && par0World.getBlock((int)(par4), (int)(par5), (int)(par6)) == Blocks.air)
         {
-        //par0World.setBlock((int)(d0), (int)(d1), (int)(d0), new Block(Item.getIdFromItem(par1ItemStack.getItem())));
-        //try
-        //{
             if(meta%2 == 0)
             {
                 meta++;
@@ -67,12 +58,6 @@ public class BehaviorPlaceBlock implements IBehaviorDispenseItem{
             }
             System.out.println("ERROR: "+par1ItemStack.getItemDamage()+","+(int)(par4)+","+(int)(par5)+","+(int)(par6)+","); 
         return (((ItemBlock)par1ItemStack.getItem()).placeBlockAt(par1ItemStack, Minecraft.getMinecraft().thePlayer, par0World, (int)(par4), (int)(par5), (int)(par6), meta, 0.5F, 0.5F, 0.5F,  par1ItemStack.getItemDamage()));
-       // }
-        //catch(IOException e)
-       // {
-           //System.out.println("ERROR: "+par1ItemStack.getItemDamage()+","+(int)(par4)+","+(int)(par5)+","+(int)(par6)+","); 
-           //return false;
-      //  }
             
         }
         else

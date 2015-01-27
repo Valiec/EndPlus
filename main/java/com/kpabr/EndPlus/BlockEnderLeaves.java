@@ -33,7 +33,6 @@ public class BlockEnderLeaves extends BlockLeaves {
     {
         super();
         this.doDecay = par1;
-        // TODO Auto-generated constructor stub
     }
     @Override
     public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int x, int y, int z, int fortune)
@@ -112,7 +111,6 @@ public class BlockEnderLeaves extends BlockLeaves {
     }
     public boolean isOpaqueCube()
     {
-        //return !this.field_150121_P;
         return false;
     }
     @Override
@@ -154,7 +152,6 @@ public class BlockEnderLeaves extends BlockLeaves {
         if (entity instanceof EntityWither)
         {
             return true;
-           // return blockID != Block.bedrock.blockID && blockID != Block.endPortal.blockID && blockID != Block.endPortalFrame.blockID;
         }
         else if (entity instanceof EntityDragon)
         {

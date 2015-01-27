@@ -22,20 +22,12 @@ public class BlockEnderEssence extends Block {
 
 	public BlockEnderEssence(Material par2Material) {
 		super(par2Material);
-		// TODO Auto-generated constructor stub
 	}
-	//@Override
 	
 	@Override
     public int quantityDropped(Random par1Random)
     {
         return 1 + par1Random.nextInt(1);
     }
-    
-	/*@Override
-    @SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister) {
-        this. = iconRegister.registerIcon("EndPlus:enderiteOre");
-    }*/
 
 }

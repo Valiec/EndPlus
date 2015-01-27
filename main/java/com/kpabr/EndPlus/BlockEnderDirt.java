@@ -25,7 +25,6 @@ public class BlockEnderDirt extends Block {
 
 	public BlockEnderDirt(int par1, Material par2Material) {
 		super(par2Material);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public boolean canSustainPlant(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
@@ -44,7 +43,6 @@ public class BlockEnderDirt extends Block {
         if (entity instanceof EntityWither)
         {
             return true;
-           // return blockID != Block.bedrock.blockID && blockID != Block.endPortal.blockID && blockID != Block.endPortalFrame.blockID;
         }
         else if (entity instanceof EntityDragon)
         {
@@ -53,9 +51,5 @@ public class BlockEnderDirt extends Block {
 
         return true;
     }
-	//@SideOnly(Side.CLIENT)
-	///public void registerIcons(IIconRegister iconRegister) {
-     //   this.field_149761_L = iconRegister.registerIcon("EndPlus:enderDirt");
-    //}
 
 }

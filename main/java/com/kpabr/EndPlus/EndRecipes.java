@@ -115,6 +115,10 @@ public class EndRecipes {
         
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.questCompass, 1), new Object[]{" X ", "XYX", " X ", 'X', Items.iron_ingot, 'Y', Items.emerald});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.golderaldWand, 1), new Object[]{" Y ", "X  ", 'X', Items.blaze_rod, 'Y', EndPlus.items.golderaldGem});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.luciteWand, 1), new Object[]{" Y ", "X  ", 'X', Items.blaze_rod, 'Y', EndPlus.items.luciteCrystal});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.umbriteWand, 1), new Object[]{" Y ", "X  ", 'X', Items.blaze_rod, 'Y', EndPlus.items.umbriteCrystal});
+        
     }
     public void setupShapelessCrafting()
     {

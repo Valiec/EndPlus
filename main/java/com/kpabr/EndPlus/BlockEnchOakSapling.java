@@ -44,9 +44,8 @@ public class BlockEnchOakSapling extends BlockSapling {
     }
     public void func_149878_d(World p_149878_1_, int p_149878_2_, int p_149878_3_, int p_149878_4_, Random p_149878_5_)
     {
-        //if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(p_149878_1_, p_149878_5_, p_149878_2_, p_149878_3_, p_149878_4_)) return;
         int l = p_149878_1_.getBlockMetadata(p_149878_2_, p_149878_3_, p_149878_4_) & 7;
-        l = 1; //TODO test
+        l = 1;
         WorldGenEnchTree object;
         int i1 = p_149878_2_;
         int k1 = p_149878_3_;

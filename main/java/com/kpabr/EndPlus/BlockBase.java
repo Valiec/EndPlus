@@ -30,13 +30,7 @@ public class BlockBase extends Block {
     public int quantityDropped(Random par1Random)
     {
 	    
-        return 1 + par1Random.nextInt(1); //!!!!!BUG!!!!!
+        return 1 + par1Random.nextInt(1);
     }
-    
-	/*@Override
-    @SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister) {
-        this. = iconRegister.registerIcon("EndPlus:enderiteOre");
-    }*/
 
 }

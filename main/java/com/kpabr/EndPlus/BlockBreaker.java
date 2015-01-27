@@ -42,6 +42,7 @@ public class BlockBreaker extends Block{
     {
         return 2;
     }
+    @SideOnly(Side.CLIENT)
     public IIcon getIcon(int i, int j)
     {
                 if(j == i)
@@ -66,30 +67,28 @@ public class BlockBreaker extends Block{
         if (flag && !flag1)
         {
             p_149695_1_.scheduleBlockUpdate(p_149695_2_, p_149695_3_, p_149695_4_, this, this.tickRate(p_149695_1_));
-            //p_149695_1_.setBlockMetadataWithNotify(p_149695_2_, p_149695_3_, p_149695_4_, l | 8, 4);
         }
         else if (!flag && flag1)
         {
-            //p_149695_1_.setBlockMetadataWithNotify(p_149695_2_, p_149695_3_, p_149695_4_, l & -9, 4);
         }
     }
     public boolean canConnectRedstone(IBlockAccess iba, int i, int j, int k, int dir)
     {
             return true;
     }
+    @SideOnly(Side.CLIENT)
     public void updateTick(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Random p_149695_5_)
     {
-        if (!p_149695_1_.isRemote)
+        if (p_149695_1_.isRemote)
         {
         int meta = p_149695_1_.getBlockMetadata(p_149695_2_, p_149695_3_, p_149695_4_);
 
         
         if(true)
         {
-            //System.out.println("HELLO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+           
             
             int level = p_149695_1_.getStrongestIndirectPower(p_149695_2_, p_149695_3_, p_149695_4_);
-            //System.out.println(level);
             int dx = 0;
             int dy = 0;
             int dz = 0;
@@ -130,17 +129,14 @@ public class BlockBreaker extends Block{
                 dz = 0;
                 
             }
-            //System.out.println("BREAKING THE BLOCK!");
             int meta2 = p_149695_1_.getBlockMetadata(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz);
-            //p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz).dropBlockAsItem(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, meta2, 0);
-            //p_149695_1_.setBlockToAir(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz);
             p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz).harvestBlock(p_149695_1_, Minecraft.getMinecraft().thePlayer, p_149695_2_+dx*2, p_149695_3_+dy*2, p_149695_4_+dz*2, 0);
             p_149695_1_.setBlockToAir(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz);
-            //p_149695_1_.getBlock(p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz).onNeighborBlockChange(p_149695_1_, p_149695_2_+dx, p_149695_3_+dy, p_149695_4_+dz, EndPlus.blocks.redReceiver);
         }
         }
         
     }
+    @SideOnly(Side.CLIENT)
     @Override
     public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
     {

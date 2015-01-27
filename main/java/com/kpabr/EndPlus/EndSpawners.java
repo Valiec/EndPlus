@@ -45,7 +45,7 @@ public class EndSpawners {
         /*Initializing mob spawner blocks*/
         for (Object[] spawner : spawnerData)
         {
-            spawner[4] = new BlockCustomSpawner((String)spawner[0]).setBlockName((String)spawner[3]).setCreativeTab(EndPlus.tabEndplusSpawners).setBlockTextureName("endplus:zombieSpawner");
+            spawner[4] = new BlockCustomSpawner((String)spawner[0]).setBlockName((String)spawner[3]).setCreativeTab(EndPlus.tabEndplusSpawners).setBlockTextureName("endplus:customSpawner");
         }
         
     }
