@@ -74,7 +74,7 @@ public class EndVersionChecker {
     }
     public String toVersionNumber(int id)
     {
-        Object[][] versions = {{1, "1.0.0"}, {2,"1.1.0"}, {3,"1.2.0"}, {4, "1.2.1"}, {5, "1.3.0"}, {6, "1.3.1"}, {7, "1.4.0"}, {8, "1.4.1"}, {9, "1.4.2"}, {10, "1.4.3"}, {11, "1.4.4"}, {12, "1.5.0"}, {13, "1.5.1"}, {14, "1.5.2"}, {15, "1.6.0"}};
+        Object[][] versions = {{1, "1.0.0"}, {2,"1.1.0"}, {3,"1.2.0"}, {4, "1.2.1"}, {5, "1.3.0"}, {6, "1.3.1"}, {7, "1.4.0"}, {8, "1.4.1"}, {9, "1.4.2"}, {10, "1.4.3"}, {11, "1.4.4"}, {12, "1.5.0"}, {13, "1.5.1"}, {14, "1.5.2"}, {15, "1.6.0"}, {16, "1.6.1"}, {17, "1.6.2"}, {18, "1.6.3"}, {19, "1.6.4"}, {20, "1.7.0"}, {21, "1.7.1"}, {22, "1.7.2"}, {23, "1.7.3"}, {24, "1.7.4"}, {25, "1.8.0"}};
         for (int i = 0; i<versions.length; i++)
         {
             if((Integer)(versions[i][0]) == id)
@@ -82,7 +82,7 @@ public class EndVersionChecker {
                 return (String)(versions[i][1]);
             }
         }
-        return "0.0.0";
+        return "newer than 1.8.0 or unrecognized version ID";
     }
     @SubscribeEvent
     public void onUpdateMessage(PlayerEvent.PlayerLoggedInEvent event) throws UnknownHostException, IOException

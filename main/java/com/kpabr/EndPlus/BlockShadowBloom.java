@@ -90,12 +90,12 @@ public class BlockShadowBloom extends BlockFlower
         
         return EndPlus.items.enderWart;
     }
-    @Override
+    /*@Override
     public Item getItemDropped(int p_149694_1_, Random p_149694_2_, int p_149694_3_)
     {  
         return EndPlus.items.enderWart;
-    }
-    @Override
+    }*/
+    /*@Override
     public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
     {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
@@ -112,5 +112,5 @@ public class BlockShadowBloom extends BlockFlower
         }
 
         return ret;
-    }
+    }*/
 }

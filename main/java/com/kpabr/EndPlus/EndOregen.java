@@ -61,7 +61,7 @@ public class EndOregen implements IWorldGenerator
                    int k = world.getTopSolidOrLiquidBlock(i, j);
                    (new WorldGenEnderSpikes(EndPlus.blocks.endGrass)).generate(world, random, i, k, j);
                }
-               if (random.nextInt(15) == 0)
+               if (random.nextInt(65) == 0)
                {
                    int i = x + random.nextInt(16) + 8;
                    int j = z + random.nextInt(16) + 8;
@@ -77,6 +77,16 @@ public class EndOregen implements IWorldGenerator
                    //System.out.println(Ycoord1);
                    //System.out.println(Zcoord1);
                    (new WorldGenEnderForest(false,true)).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
+               }
+               if(random.nextInt(2) == 0)
+               {
+                   int Xcoord1 = x + random.nextInt(16);
+                   int Zcoord1 = z + random.nextInt(16);
+                   int Ycoord1 = world.getTopSolidOrLiquidBlock(Xcoord1, Zcoord1);
+                   //System.out.println(Xcoord1);
+                   //System.out.println(Ycoord1);
+                   //System.out.println(Zcoord1);
+                   world.setBlock(Xcoord1, Ycoord1, Zcoord1, EndPlus.blocks.shadowBloom);
                }
            }
  
