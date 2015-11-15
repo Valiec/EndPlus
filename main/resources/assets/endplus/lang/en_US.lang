@@ -1,4 +1,6 @@
-tile.blockGolderald.name=Block of Golderald
+
+item.shadowCrystal.name=Shadow Crystal
+
 tile.shadowBloom.name=Shadowbloom
 item.golderaldWand.name=Golderald Wand
 item.luciteWand.name=Lucite Wand

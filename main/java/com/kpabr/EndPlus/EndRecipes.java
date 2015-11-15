@@ -142,6 +142,7 @@ public class EndRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.infusedQuartz, 9), new Object[]{EndPlus.blocks.infusedQuartzBlock});
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone_slab), new Object[]{EndPlus.blocks.stoneSlab});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.stoneSlab), new Object[]{Blocks.stone_slab});
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.shadowCrystal), new Object[]{EndPlus.blocks.shadowBloom});
     }
     public void addEgg(Item mobItem, int id)
     {

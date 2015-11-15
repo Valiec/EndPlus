@@ -2,6 +2,7 @@ package com.kpabr.EndPlus;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockEndPortal;
 import net.minecraft.block.BlockRedstoneWire;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
@@ -88,6 +89,7 @@ public class EndBlocks {
     public static Block chiseledStone;
 	public static Block stoneSlab;
 	public static Block doubleStoneSlab;
+	public static Block endportal;
     
     
     public void registerBlocks()
@@ -97,7 +99,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.endSapling, "ender_sapling");
         GameRegistry.registerBlock(this.enchSapling, "enchanted_oak_sapling");
         GameRegistry.registerBlock(this.enchBirchSapling, "enchanted_birch_sapling");
-        GameRegistry.registerBlock(this.buoy, ItemBlockBuoy.class, "buoy");
+        //GameRegistry.registerBlock(this.buoy, ItemBlockBuoy.class, "buoy");
         GameRegistry.registerBlock(this.endLeaves, "ender_leaves");
         GameRegistry.registerBlock(this.endLeavesGen, "ender_leaves_decay");
         GameRegistry.registerBlock(this.enchLeaves, "enchanted_leaves");
@@ -163,8 +165,10 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.golderaldOre, "golderald_ore");
         GameRegistry.registerBlock(this.chiseledStone, "chiseled_stone");
         GameRegistry.registerBlock(this.shadowBloom, "shadow_bloom");
+        GameRegistry.registerBlock(this.endportal, "end_portal");
         GameRegistry.registerBlock(this.stoneSlab, ItemBlockStoneSlab.class, "single_stone_slab");
         GameRegistry.registerBlock(this.doubleStoneSlab, ItemBlockStoneSlab.class, "double_stone_slab");
+        //Block.blockRegistry.addObject(119, "end_portal", (new BlockEnderPortal(Material.portal)).setHardness(-1.0F).setResistance(6000000.0F));
     }
     public void setupBlocks()
     {
@@ -241,6 +245,7 @@ public class EndBlocks {
         this.chiseledStone = new BlockBase(Material.rock).setBlockTextureName("endplus:chiseled_stone").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockChiseledStone").setHardness(0.8F);
         this.stoneSlab = new BlockCustomSlab(false, Material.rock).setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("minecraft:stone").setLightOpacity(0).setBlockName("smoothStoneSlab").setHardness(0.8F);
         this.doubleStoneSlab = new BlockCustomSlab(true, Material.rock).setCreativeTab(null).setBlockTextureName("minecraft:stone").setBlockName("smoothDoubleStoneSlab").setHardness(0.8F);
+        this.endportal = new BlockEnderPortal(Material.portal).setHardness(-1.0F).setResistance(6000000.0F);
     }
     public void setupHarvestLevels()
     {

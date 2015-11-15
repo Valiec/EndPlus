@@ -75,6 +75,7 @@ public class EndItems {
     public static Item golderaldWand;
     public static Item luciteWand;
     public static Item umbriteWand;
+    public static Item shadowCrystal;
 
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -164,6 +165,7 @@ public class EndItems {
         GameRegistry.registerItem(this.golderaldWand, "golderald_wand");
         GameRegistry.registerItem(this.luciteWand, "lucite_wand");
         GameRegistry.registerItem(this.umbriteWand, "umbrite_wand");
+        GameRegistry.registerItem(this.shadowCrystal, "shadow_crystal");
     }
     
     public void setupItems()
@@ -245,5 +247,7 @@ public class EndItems {
         this.golderaldWand = new ItemGolderaldWand(1).setTextureName("endplus:wandGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldWand");
         this.luciteWand = new ItemGolderaldWand(0).setTextureName("endplus:wandLucite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("luciteWand");
         this.umbriteWand = new ItemGolderaldWand(2).setTextureName("endplus:wandUmbrite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("umbriteWand");
+        
+        this.shadowCrystal = new ItemBase().setTextureName("endplus:shadowCrystal").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("shadowCrystal");
     }
 }

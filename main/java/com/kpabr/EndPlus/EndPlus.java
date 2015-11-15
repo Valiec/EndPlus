@@ -11,10 +11,12 @@ import java.net.UnknownHostException;
 
 import com.kpabr.EndPlus.CommonProxy;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
@@ -83,6 +85,7 @@ public class EndPlus
         
         ClientCommandHandler.instance.registerCommand(new TestCommand());
         ClientCommandHandler.instance.registerCommand(new EndPlusCommand());
+        ClientCommandHandler.instance.registerCommand(new TimeCommand());
    	    EndPlus.config.load();
         if(!config.hasKey(Configuration.CATEGORY_GENERAL, "OverrideDimensionID"))
         {
@@ -93,6 +96,8 @@ public class EndPlus
         EndPlus.config.getBoolean("AutoUpdate", Configuration.CATEGORY_GENERAL, true, "Sets whether the auto-upater will run");
         }
         EndPlus.config.save();
+        
+        //Block.blockRegistry.addObject(119, "minecraft:end_portal", (new BlockBuoy(Material.rock)).setBlockName("buoy").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.9F));
 
         
         

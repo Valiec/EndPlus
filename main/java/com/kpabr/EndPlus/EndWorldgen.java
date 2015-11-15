@@ -36,7 +36,10 @@ public class EndWorldgen {
        
         /*Setting up worldgen*/
         WorldServer world = DimensionManager.getWorld(1);
+        DimensionManager.unregisterProviderType(1);
         DimensionManager.registerProviderType(dimID, WorldProviderEnder.class, true);
+        DimensionManager.registerProviderType(1, WorldProviderEnder.class, true);
+        //DimensionManager.unregisterDimension(1);
         DimensionManager.registerDimension(dimID, dimID);
         GameRegistry.registerWorldGenerator(enderblock, 1);
         BiomeGenEnchHills eh = new BiomeGenEnchHills(80, 0);
@@ -103,7 +106,7 @@ public class EndWorldgen {
     @SubscribeEvent
     public void onEndDecorate(PopulateChunkEvent event)
     {
-        if (event.chunkProvider.getClass() != ChunkProviderServer.class && event.world.provider.dimensionId == 1)
+        if (event.chunkProvider.getClass() != ChunkProviderServer.class && event.world.provider.dimensionId == 1)// || event.world.provider.dimensionId == dimID)
         {
             ChunkProviderEnder end = (ChunkProviderEnder)(new ChunkProviderEnder(DimensionManager.getWorld(1), DimensionManager.getWorld(1).getSeed()));
 

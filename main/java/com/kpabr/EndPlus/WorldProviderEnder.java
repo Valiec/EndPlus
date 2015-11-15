@@ -9,6 +9,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
+import net.minecraft.world.WorldProviderEnd;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -26,10 +27,10 @@ public class WorldProviderEnder extends WorldProvider
     public void registerWorldChunkManager()
     {
         this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.sky, 0.5F);
-        this.dimensionId = 6;
-        this.hasNoSky = true;
+        this.dimensionId = 1;
+        this.hasNoSky = false;
     }
-
+    
     /**
      * Returns a new chunk provider which generates chunks for this world
      */
@@ -38,15 +39,7 @@ public class WorldProviderEnder extends WorldProvider
         //return new ChunkProviderEnder(this.worldObj, this.worldObj.getSeed());
     	return new ChunkProviderEnder(this.worldObj, this.worldObj.getSeed());
     }
-
-    /**
-     * Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime)
-     */
-    public float calculateCelestialAngle(long par1, float par3)
-    {
-        return 0.0F;
-    }
-
+    
     @SideOnly(Side.CLIENT)
 
     /**
@@ -85,6 +78,11 @@ public class WorldProviderEnder extends WorldProvider
         f5 *= f2 * 0.0F + 0.15F;
         return Vec3.createVectorHelper((double)f3, (double)f4, (double)f5);
     }
+    
+    public float getSunBrightnessFactor(float p_72967_1_)
+    {
+        return this.worldObj.getSunBrightnessFactor(p_72967_1_);
+    }
 
     @SideOnly(Side.CLIENT)
     public boolean isSkyColored()
@@ -99,7 +97,9 @@ public class WorldProviderEnder extends WorldProvider
     {
         return false;
     }
-
+    
+    
+    
     /**
      * Returns 'true' if in the "main surface world", but 'false' if in the Nether or End dimensions.
      */
@@ -115,7 +115,7 @@ public class WorldProviderEnder extends WorldProvider
      */
     public float getCloudHeight()
     {
-        return 8.0F;
+        return 0.0F;
     }
 
     /**

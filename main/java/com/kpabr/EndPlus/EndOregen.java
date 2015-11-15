@@ -98,7 +98,7 @@ public class EndOregen implements IWorldGenerator
        {
     	   this.addOre(EndPlus.blocks.graniteRough, world, random, x, z, 16, 16, 64, 10, 14, 256, Blocks.stone);
     	   this.addOre(EndPlus.blocks.luciteOre, world, random, x, z, 16, 16, 8, 15, 0, 32, Blocks.stone);
-    	   this.addOre(EndPlus.blocks.cavernStone, world, random, x, z, 16, 16, 40, 12, 14, 64, Blocks.stone);
+    	   this.addOre(EndPlus.blocks.cavernStone, world, random, x, z, 16, 16, 20, 12, 14, 64, Blocks.stone);
     	   this.addOre(EndPlus.blocks.overworldEssence, world, random, x, z, 16, 16, 13, 10, 0, 256, Blocks.stone);
            if (random.nextInt(17) == 0)
            {
