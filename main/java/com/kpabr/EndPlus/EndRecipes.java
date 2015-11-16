@@ -119,6 +119,12 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.luciteWand, 1), new Object[]{" Y ", "X  ", 'X', Items.blaze_rod, 'Y', EndPlus.items.luciteCrystal});
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.umbriteWand, 1), new Object[]{" Y ", "X  ", 'X', Items.blaze_rod, 'Y', EndPlus.items.umbriteCrystal});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.chestplateShadow, 1), new Object[]{"X X", "XXX", "XXX", 'X', EndPlus.items.shadowCrystal});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.legsShadow, 1), new Object[]{"XXX", "X X", "X X", 'X', EndPlus.items.shadowCrystal});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.helmetShadow, 1), new Object[]{"XXX", "X X", 'X', EndPlus.items.shadowCrystal});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.helmetShadow, 1), new Object[]{"XXX", "X X", 'X', EndPlus.items.shadowCrystal});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.items.bootsShadow, 1), new Object[]{"X X", "X X", 'X', EndPlus.items.shadowCrystal});
+        
     }
     public void setupShapelessCrafting()
     {

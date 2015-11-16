@@ -1,4 +1,7 @@
-
+item.shadowLegs.name=Shadow Leggings
+item.shadowBoots.name=Shadow Boots
+item.shadowHelmet.name=Shadow Helmet
+item.shadowChestplate.name=Shadow Chestplate
 item.shadowCrystal.name=Shadow Crystal
 
 tile.shadowBloom.name=Shadowbloom
@@ -13,6 +16,7 @@ tile.enchLeaves.name=Enchanted Oak Leaves
 tile.enchBirchSapling.name=Enchanted Birch Sapling
 tile.enchSapling.name=Enchanted Oak Sapling
 item.questCompass.name=Quest Compass
+tile.blockGolderald.name=Block of Golderald
 item.golderaldGem.name=Golderald Gem
 tile.smoothStoneSlab.name=Smooth Stone Slab
 tile.blockChiseledStone.name=Chiseled Stone

@@ -76,6 +76,10 @@ public class EndItems {
     public static Item luciteWand;
     public static Item umbriteWand;
     public static Item shadowCrystal;
+    public static Item chestplateShadow;
+    public static Item legsShadow;
+    public static Item bootsShadow;
+    public static Item helmetShadow;
 
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -89,6 +93,7 @@ public class EndItems {
     static ArmorMaterial FlameriteArmor = EnumHelper.addArmorMaterial("FLAMERITE", 55, new int[]{4, 6, 5, 3}, 25);
     static ArmorMaterial gFlameriteArmor = EnumHelper.addArmorMaterial("GFLAMERITE", 53, new int[]{4, 6, 5, 3}, 25);
     static ArmorMaterial InfusedQuartzArmor = EnumHelper.addArmorMaterial("INFUSEDQUARTZ", 15, new int[]{3, 8, 5, 2}, 25);
+    static ArmorMaterial ShadowArmor = EnumHelper.addArmorMaterial("SHADOW", 55, new int[]{5, 9, 7, 5}, 27);
 
     public void registerItems()
     {
@@ -166,6 +171,11 @@ public class EndItems {
         GameRegistry.registerItem(this.luciteWand, "lucite_wand");
         GameRegistry.registerItem(this.umbriteWand, "umbrite_wand");
         GameRegistry.registerItem(this.shadowCrystal, "shadow_crystal");
+        
+        GameRegistry.registerItem(this.helmetShadow, "shadow_helmet");
+        GameRegistry.registerItem(this.chestplateShadow, "shadow_chestplate");
+        GameRegistry.registerItem(this.legsShadow, "shadow_leggings");
+        GameRegistry.registerItem(this.bootsShadow, "shadow_boots");
     }
     
     public void setupItems()
@@ -249,5 +259,10 @@ public class EndItems {
         this.umbriteWand = new ItemGolderaldWand(2).setTextureName("endplus:wandUmbrite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("umbriteWand");
         
         this.shadowCrystal = new ItemBase().setTextureName("endplus:shadowCrystal").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("shadowCrystal");
+        
+        this.helmetShadow = new ItemArmorBase(ShadowArmor, 9, 0).setTextureName("endplus:helmetShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowHelmet");
+        this.chestplateShadow = new ItemArmorBase(ShadowArmor, 9, 1).setTextureName("endplus:chestplateShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowChestplate");
+        this.legsShadow = new ItemArmorBase(ShadowArmor, 9, 2).setTextureName("endplus:leggingsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowLegs");
+        this.bootsShadow = new ItemArmorBase(ShadowArmor, 9, 3).setTextureName("endplus:bootsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowBoots");
     }
 }

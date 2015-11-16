@@ -10,6 +10,7 @@ public class EndRendering {
         RenderingRegistry.addNewArmourRendererPrefix("flamerite");
         RenderingRegistry.addNewArmourRendererPrefix("gflamerite");
         RenderingRegistry.addNewArmourRendererPrefix("infusedquartz");
+        RenderingRegistry.addNewArmourRendererPrefix("shadow");
     }
     
 }
