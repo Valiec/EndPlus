@@ -1,0 +1,9 @@
+Bug List:
+
+Missing Enderwood Planks/Slabs/Stairs
+
+Missing Shadow Armor
+
+Day-night cycle code uses net.minecraft
+
+Certain types of End natural gen blocks (i.e. Ender Obsidan, Enchanted Ender Obsidian?, Ender Torches, and Enderwood Logs?) are breakable by dragon.

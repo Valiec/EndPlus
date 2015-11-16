@@ -105,7 +105,7 @@ public class WorldProviderEnder extends WorldProvider
      */
     public boolean isSurfaceWorld()
     {
-        return false;
+        return true;
     }
 
     @SideOnly(Side.CLIENT)
@@ -115,7 +115,7 @@ public class WorldProviderEnder extends WorldProvider
      */
     public float getCloudHeight()
     {
-        return 0.0F;
+        return -1000.0F;
     }
 
     /**
