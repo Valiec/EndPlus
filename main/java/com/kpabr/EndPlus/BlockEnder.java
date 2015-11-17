@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.boss.EntityWither;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockEnder extends Block{
@@ -44,13 +45,11 @@ public class BlockEnder extends Block{
             p_149734_1_.spawnParticle("portal", var7, var9, var11, var13, var15, var17);
         }
     }
-    public boolean canEntityDestroy(World world, int x, int y, int z, Entity entity)
+    
+    @Override
+    public boolean canEntityDestroy(IBlockAccess world, int x, int y, int z, Entity entity)
     {
-        if (entity instanceof EntityWither)
-        {
-            return true;
-        }
-        else if (entity instanceof EntityDragon)
+        if (entity instanceof EntityDragon)
         {
             return false;
         }

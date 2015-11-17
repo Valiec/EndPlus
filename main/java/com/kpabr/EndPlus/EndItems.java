@@ -260,9 +260,9 @@ public class EndItems {
         
         this.shadowCrystal = new ItemBase().setTextureName("endplus:shadowCrystal").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("shadowCrystal");
         
-        this.helmetShadow = new ItemArmorBase(ShadowArmor, 9, 0).setTextureName("endplus:helmetShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowHelmet");
-        this.chestplateShadow = new ItemArmorBase(ShadowArmor, 9, 1).setTextureName("endplus:chestplateShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowChestplate");
-        this.legsShadow = new ItemArmorBase(ShadowArmor, 9, 2).setTextureName("endplus:leggingsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowLegs");
-        this.bootsShadow = new ItemArmorBase(ShadowArmor, 9, 3).setTextureName("endplus:bootsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowBoots");
+        this.helmetShadow = new ItemArmorShadow(ShadowArmor, 9, 0).setTextureName("endplus:helmetShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowHelmet");
+        this.chestplateShadow = new ItemArmorShadow(ShadowArmor, 9, 1).setTextureName("endplus:chestplateShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowChestplate");
+        this.legsShadow = new ItemArmorShadow(ShadowArmor, 9, 2).setTextureName("endplus:leggingsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowLegs");
+        this.bootsShadow = new ItemArmorShadow(ShadowArmor, 9, 3).setTextureName("endplus:bootsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowBoots");
     }
 }
