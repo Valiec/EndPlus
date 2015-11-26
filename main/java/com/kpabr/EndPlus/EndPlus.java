@@ -135,7 +135,6 @@ public class EndPlus
     {
          worldgen.dimID = EndPlus.config.get(Configuration.CATEGORY_GENERAL, "OverrideDimensionID", 6).getInt();
          //versionChecker.doUpdate = 
-         System.out.println(EndPlus.config.get(Configuration.CATEGORY_GENERAL, "AutoUpdate", false));
          
          if(true)
          {
