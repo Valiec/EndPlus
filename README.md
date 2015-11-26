@@ -1,4 +1,4 @@
-#EndPlus 1.6.0 for Minecraft 1.7.10
+#EndPlus 1.7.0 for Minecraft 1.7.10
 
 
 ##How to Install:
@@ -14,9 +14,9 @@
 
 1. Install Minecraft Forge
 2. Run minecraft to create a mods folder 
-3. Place the EndPlus-1.6.0-mc1.7.10.jar file into your mods folder inside your minecraft folder
+3. Place the EndPlus-1.7.0-mc1.7.10.jar file into your mods folder inside your minecraft folder
 
-If Forge is not loading the mod, check that you installed the EndPlus-1.6.0-mc1.7.10.jar file, not the EndPlus-1.6.0-mc1.7.10.zip file.
+If Forge is not loading the mod, check that you installed the EndPlus-1.7.0-mc1.7.10.jar file, not the EndPlus-1.7.0-mc1.7.10.zip file.
 
 ##Mod Info:
 
@@ -25,7 +25,7 @@ Mod Info:
 Ever thought that the End was a bit empty, or that the Nether needed something more?
 Well, then this might just be the mod you want.
 
-EndPlus adds new ores, tools, armor and more to the Nether and End dimensions. These ores are Flamerite in the Nether, and Enderite in the End. You can craft Gold and Flamerite together to make Flamerite-Gold. Flamerite-Gold tools and armor have automatic random enchantments. Enderite and Flamerite also have their own tool and armor sets. The End can also generate infinitely, and small patches of Ender Dirt with Ender Wart growing in them can generate in The End. The End terrain is also changed, with bluish Ender Grass and Ender Trees growing around the End. The Nether is now layered, with Soul Dirt on the surface, wild Nether Wart, and Umbrite Ore in the upper layer, and Netherrack on the surface and Flamerite Ore in the lower layer. The terrain of the Nether, except for the ground and ceiling, is made of Nether Stone. Essence blocks generate underground in each dimension. They are currently just decorative.
+EndPlus adds new ores, tools, armor and more to the Nether and End dimensions. These ores are Flamerite in the Nether, and Enderite in the End. You can craft Gold and Flamerite together to make Flamerite-Gold. Flamerite-Gold tools and armor have automatic random enchantments. Enderite and Flamerite also have their own tool and armor sets. The End can also generate infinitely, and small patches of Ender Dirt with Ender Wart growing in them can generate in The End. The End terrain is also changed, with bluish Ender Grass and Ender Trees growing around the End. The Nether is now layered, with Soul Dirt on the surface, wild Nether Wart, and Umbrite Ore in the upper layer, and Netherrack on the surface and Flamerite Ore in the lower layer. The terrain of the Nether, except for the ground and ceiling, is made of Nether Stone. Essence blocks generate underground in each dimension. They are currently just decorative. The End also now has a day-night cycle like the Overworld, but no sun visible in the sky.
 
 Quest Villagers can be found when the population of a village naturally increases, or gotten through Mob Spawners and Spawn Eggs, but they do not spawn naturally with the world. They give the player quests to find a structure containing a certain Quest Block and bring the block back to the villager for a reward. An item known as the Quest Compass points to the correct structure for the most recently activated quest.
 

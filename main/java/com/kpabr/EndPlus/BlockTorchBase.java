@@ -23,12 +23,14 @@ import net.minecraft.world.World;
 public class BlockTorchBase extends BlockTorch
 {
     private static final String __OBFID = "CL_00000325";
+    private boolean dragonProof;
 
-    protected BlockTorchBase()
+    protected BlockTorchBase(boolean dragonProof)
     {
         super();
         this.setTickRandomly(true);
         this.setCreativeTab(CreativeTabs.tabDecorations);
+        this.dragonProof = dragonProof;
     }
     
     @Override
@@ -39,7 +41,7 @@ public class BlockTorchBase extends BlockTorch
         {
             return true;
         }
-        else if (entity instanceof EntityDragon)
+        else if (entity instanceof EntityDragon && this.dragonProof)
         {
             return false;
         }

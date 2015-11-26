@@ -5,10 +5,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockEndPortal;
 import net.minecraft.block.BlockRedstoneWire;
 import net.minecraft.block.BlockStairs;
+import net.minecraft.block.BlockWood;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemSlab;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class EndBlocks {
 
@@ -90,6 +92,11 @@ public class EndBlocks {
 	public static Block stoneSlab;
 	public static Block doubleStoneSlab;
 	public static Block endportal;
+	public static Block enderwoodPlanks;
+	public static Block enderwoodStairs;
+	public static Block enderwoodSlab;
+	public static Block doubleEnderwoodSlab;
+	public static Block enderwoodChest;
     
     
     public void registerBlocks()
@@ -165,10 +172,15 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.golderaldOre, "golderald_ore");
         GameRegistry.registerBlock(this.chiseledStone, "chiseled_stone");
         GameRegistry.registerBlock(this.shadowBloom, "shadow_bloom");
-        GameRegistry.registerBlock(this.endportal, "end_portal");
+        //GameRegistry.registerBlock(this.endportal, "end_portal");
         GameRegistry.registerBlock(this.stoneSlab, ItemBlockStoneSlab.class, "single_stone_slab");
         GameRegistry.registerBlock(this.doubleStoneSlab, ItemBlockStoneSlab.class, "double_stone_slab");
         //Block.blockRegistry.addObject(119, "end_portal", (new BlockEnderPortal(Material.portal)).setHardness(-1.0F).setResistance(6000000.0F));
+        GameRegistry.registerBlock(this.enderwoodPlanks, "enderwood_planks");
+        GameRegistry.registerBlock(this.enderwoodStairs, "enderwood_stairs");
+        GameRegistry.registerBlock(this.enderwoodSlab, ItemBlockWoodSlab.class, "single_enderwood_slab");
+        GameRegistry.registerBlock(this.doubleEnderwoodSlab, ItemBlockWoodSlab.class, "double_enderwood_slab");
+        GameRegistry.registerBlock(this.enderwoodChest, "enderwood_chest");
     }
     public void setupBlocks()
     {
@@ -182,8 +194,8 @@ public class EndBlocks {
         this.endLog = new BlockEnderLog().setBlockName("enderLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_big_oak1");
         this.enchOakLog = new BlockEnchOakLog().setBlockName("enchOakLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_oak");
         this.enchBirchLog = new BlockEnchBirchLog().setBlockName("enchBirchLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_birch");
-        this.netherTorch = new BlockTorchBase().setBlockTextureName("endplus:netherTorch").setBlockName("netherTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
-        this.enderTorch = new BlockTorchBase().setBlockTextureName("endplus:enderTorch").setBlockName("enderTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
+        this.netherTorch = new BlockTorchBase(false).setBlockTextureName("endplus:netherTorch").setBlockName("netherTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
+        this.enderTorch = new BlockTorchBase(true).setBlockTextureName("endplus:enderTorch").setBlockName("enderTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
         this.graniteRough = new BlockBase(Material.rock).setBlockTextureName("endplus:graniteRough").setBlockName("graniteRough").setCreativeTab(EndPlus.tabEndplus).setHardness(1.6F).setResistance(10.0F);
         this.graniteSmooth = new BlockBase(Material.rock).setBlockTextureName("endplus:graniteSmooth").setBlockName("graniteSmooth").setCreativeTab(EndPlus.tabEndplus).setHardness(1.6F).setResistance(10.0F);
         this.enderStalk = new BlockEnderStalk().setBlockTextureName("endplus:enderStalk").setBlockName("enderStalk");
@@ -245,7 +257,13 @@ public class EndBlocks {
         this.chiseledStone = new BlockBase(Material.rock).setBlockTextureName("endplus:chiseled_stone").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockChiseledStone").setHardness(0.8F);
         this.stoneSlab = new BlockCustomSlab(false, Material.rock).setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("minecraft:stone").setLightOpacity(0).setBlockName("smoothStoneSlab").setHardness(0.8F);
         this.doubleStoneSlab = new BlockCustomSlab(true, Material.rock).setCreativeTab(null).setBlockTextureName("minecraft:stone").setBlockName("smoothDoubleStoneSlab").setHardness(0.8F);
-        this.endportal = new BlockEnderPortal(Material.portal).setHardness(-1.0F).setResistance(6000000.0F);
+        this.enderwoodPlanks = new BlockBase(Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodPlanks").setBlockTextureName("endplus:planks_enderwood");
+        this.enderwoodSlab = new BlockCustomSlab(false, Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setLightOpacity(0).setBlockName("enderwoodSlab").setBlockTextureName("endplus:planks_enderwood");
+        this.doubleEnderwoodSlab = new BlockCustomSlab(true, Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(null).setBlockName("enderwoodDoubleSlab").setBlockTextureName("endplus:planks_enderwood");
+        this.enderwoodStairs = new BlockMossyCobblestoneStairs(EndPlus.blocks.enderwoodPlanks, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodStairs");
+        //this.endportal = new BlockEnderPortal(Material.portal).setHardness(-1.0F).setResistance(6000000.0F);
+        this.enderwoodChest = new BlockEnderwoodChest(0).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodPlanks");
+
     }
     public void setupHarvestLevels()
     {
@@ -295,7 +313,19 @@ public class EndBlocks {
         chiseledStone.setHarvestLevel("pickaxe", 0); 
         stoneSlab.setHarvestLevel("pickaxe", 0); 
         doubleStoneSlab.setHarvestLevel("pickaxe", 0); 
+        stoneSlab.setHarvestLevel("axe", 0); 
+        doubleStoneSlab.setHarvestLevel("axe", 0); 
        
+    }
+    public void registerBlocksOreDict()
+    {
+    	OreDictionary.registerOre("logWood", this.endLog);
+    	OreDictionary.registerOre("plankWood", this.enderwoodPlanks);
+    	OreDictionary.registerOre("slabWood", this.enderwoodSlab);
+    	OreDictionary.registerOre("stairWood", this.enderwoodStairs);
+    	
+    	
+        
     }
     
 }

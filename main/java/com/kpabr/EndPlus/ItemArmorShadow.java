@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 /*
  * Created by Valiec2019
@@ -29,15 +30,21 @@ public class ItemArmorShadow extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
     {
-		if(player.isWet() || (player.getBrightness(1.0F) > 0.5F && player.worldObj.canBlockSeeTheSky((int)player.posX, (int)player.posY, (int)player.posZ)))
+		if((!player.worldObj.isRemote && player.isWet()) || (!player.worldObj.isRemote && player.worldObj.isDaytime() && player.getBrightness(1.0F) > 0.5F && player.worldObj.canBlockSeeTheSky(MathHelper.floor_double(player.posX), MathHelper.floor_double(player.posY), MathHelper.floor_double(player.posZ))))
 		{
-			if(itemStack.getItemDamage() < itemStack.getMaxDamage())
+			if(itemStack.getMaxDamage() - itemStack.getItemDamage() >= 1)
 			{
 				itemStack.damageItem(1, player);
 			}
 			else
 			{
-				itemStack.stackSize = 0;
+				for(int i = 0; i<player.inventory.armorInventory.length; i++)
+				{
+					if(player.inventory.armorInventory[i] != null && player.inventory.armorInventory[i].getItemDamage() >= player.inventory.armorInventory[i].getMaxDamage())
+					{
+						player.inventory.armorInventory[i] = (ItemStack)null;
+					}
+				}
 			}
 		}
     }

@@ -125,12 +125,16 @@ public class EndRecipes {
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.helmetShadow, 1), new Object[]{"XXX", "X X", 'X', EndPlus.items.shadowCrystal});
         GameRegistry.addRecipe(new ItemStack(EndPlus.items.bootsShadow, 1), new Object[]{"X X", "X X", 'X', EndPlus.items.shadowCrystal});
         
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.enderwoodStairs, 4), new Object[]{"  X", " XX", "XXX", 'X', EndPlus.blocks.enderwoodPlanks});
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.enderwoodStairs, 4), new Object[]{"X  ", "XX ", "XXX", 'X', EndPlus.blocks.enderwoodPlanks});
+        
+        GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.enderwoodSlab, 6), new Object[]{"XXX", 'X', EndPlus.blocks.enderwoodPlanks});
+        
     }
     public void setupShapelessCrafting()
     {
         /*Registering shapeless crafting recipes in GameRegistry*/
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Items.arrow});
-        GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 5), new Object[]{EndPlus.blocks.endLog});
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 0), new Object[]{EndPlus.blocks.enchOakLog});
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.planks, 4, 2), new Object[]{EndPlus.blocks.enchBirchLog});
         GameRegistry.addShapelessRecipe(new ItemStack(Items.skull, 3, 4), new Object[]{Blocks.soul_sand, EndPlus.items.umbriteCrystal, Items.gunpowder});
@@ -149,7 +153,14 @@ public class EndRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone_slab), new Object[]{EndPlus.blocks.stoneSlab});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.stoneSlab), new Object[]{Blocks.stone_slab});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.shadowCrystal), new Object[]{EndPlus.blocks.shadowBloom});
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.enderwoodPlanks, 4), new Object[]{EndPlus.blocks.endLog});
     }
+    /*public void addMissingWoodRecipes()
+    {
+    	for(ItemStack ore : OreDictionary.getOres("plankWood")) //all wood planks
+    	{
+    		GameRegistry.addRecipe(new ItemStack(EndPlus.blocks.enderwoodSlab, 6), new Object[]{"XXX", 'X', });
+    }*/
     public void addEgg(Item mobItem, int id)
     {
         /*Registering shapeless spawn egg crafting recipes in GameRegistry*/

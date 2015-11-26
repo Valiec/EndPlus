@@ -45,9 +45,9 @@ public class EndPlus
  
     /*Mod ID and Version declarations*/
     public static final String MODID = "endplus";
-    public static final String VERSION = "1.6.2";
+    public static final String VERSION = "1.7.0";
     public static final String NAME = "endplus";
-    static int versionID = 17; //Used by version checker!
+    static int versionID = 18; //Used by version checker!
     
     static EndBlocks blocks = new EndBlocks();
     static EndItems items = new EndItems();
@@ -110,6 +110,7 @@ public class EndPlus
      	blocks.registerBlocks();
      	items.registerItems();
         blocks.setupHarvestLevels();
+        blocks.registerBlocksOreDict();
      	recipes.setupShapelessCrafting();
      	recipes.setupShapedCrafting();
      	recipes.setupSmelting();
