@@ -96,7 +96,7 @@ public class EndBlocks {
 	public static Block enderwoodStairs;
 	public static Block enderwoodSlab;
 	public static Block doubleEnderwoodSlab;
-	public static Block enderwoodChest;
+	//public static Block enderwoodChest;
     
     
     public void registerBlocks()
@@ -180,7 +180,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.enderwoodStairs, "enderwood_stairs");
         GameRegistry.registerBlock(this.enderwoodSlab, ItemBlockWoodSlab.class, "single_enderwood_slab");
         GameRegistry.registerBlock(this.doubleEnderwoodSlab, ItemBlockWoodSlab.class, "double_enderwood_slab");
-        GameRegistry.registerBlock(this.enderwoodChest, "enderwood_chest");
+        //GameRegistry.registerBlock(this.enderwoodChest, "enderwood_chest");
     }
     public void setupBlocks()
     {
@@ -262,7 +262,7 @@ public class EndBlocks {
         this.doubleEnderwoodSlab = new BlockCustomSlab(true, Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(null).setBlockName("enderwoodDoubleSlab").setBlockTextureName("endplus:planks_enderwood");
         this.enderwoodStairs = new BlockMossyCobblestoneStairs(EndPlus.blocks.enderwoodPlanks, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodStairs");
         //this.endportal = new BlockEnderPortal(Material.portal).setHardness(-1.0F).setResistance(6000000.0F);
-        this.enderwoodChest = new BlockEnderwoodChest(0).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodPlanks");
+        //this.enderwoodChest = new BlockEnderwoodChest(0).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodPlanks");
 
     }
     public void setupHarvestLevels()
