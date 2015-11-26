@@ -42,7 +42,13 @@ public class TimeCommand extends CommandBase
     	float sunBright = Minecraft.getMinecraft().thePlayer.worldObj.getSunBrightness(worldTime);
     	float sunBrightFactor = Minecraft.getMinecraft().thePlayer.worldObj.getSunBrightnessFactor(worldTime);
     	float celestialAngle = Minecraft.getMinecraft().thePlayer.worldObj.getCelestialAngle(worldTime);
-    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("World Name: "+playerWorld+"\n Dimension ID: "+dimID+"\n World Time:"+worldTime+"\n Skylight Subtracted: "+sunLight+"\n Sun Brightness: "+sunBright+"\n Sun Brightness Factor: "+sunBrightFactor+"\n Celestial Angle: "+celestialAngle));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("World Name: "+playerWorld));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Dimension ID: "+dimID));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("World Time:"+worldTime));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Skylight Subtracted: "+sunLight));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Sun Brightness: "+sunBright));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Sun Brightness Factor: "+sunBrightFactor));
+    	Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Celestial Angle: "+celestialAngle));
     }
         
       
