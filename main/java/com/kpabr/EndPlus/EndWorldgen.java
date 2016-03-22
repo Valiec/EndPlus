@@ -37,8 +37,10 @@ public class EndWorldgen {
         /*Setting up worldgen*/
         WorldServer world = DimensionManager.getWorld(1);
         DimensionManager.unregisterProviderType(1);
+        //DimensionManager.unregisterProviderType(-1);
         DimensionManager.registerProviderType(dimID, WorldProviderEnder.class, true);
         DimensionManager.registerProviderType(1, WorldProviderEnder.class, true);
+        //DimensionManager.registerProviderType(-1, WorldProviderNether.class, true);
         //DimensionManager.unregisterDimension(1);
         DimensionManager.registerDimension(dimID, dimID);
         GameRegistry.registerWorldGenerator(enderblock, 1);

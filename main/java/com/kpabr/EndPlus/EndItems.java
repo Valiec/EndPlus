@@ -81,6 +81,12 @@ public class EndItems {
     public static Item legsShadow;
     public static Item bootsShadow;
     public static Item helmetShadow;
+    
+    public static Item overworldEssence;
+    public static Item netherEssence;
+    public static Item enderEssence;
+    
+    public static Item _3WorldsEssence;
 
     /*Tool and Armor Material declarations*/
     static ToolMaterial Enderite = EnumHelper.addToolMaterial("ENDERITE", 4, 2544, 16.0F, 6, 28);
@@ -177,6 +183,12 @@ public class EndItems {
         GameRegistry.registerItem(this.chestplateShadow, "shadow_chestplate");
         GameRegistry.registerItem(this.legsShadow, "shadow_leggings");
         GameRegistry.registerItem(this.bootsShadow, "shadow_boots");
+        
+        GameRegistry.registerItem(this.overworldEssence, "overworld_essence_crystal");
+        GameRegistry.registerItem(this.netherEssence, "nether_essence_crystal");
+        GameRegistry.registerItem(this.enderEssence, "ender_essence_crystal");
+        
+        GameRegistry.registerItem(this._3WorldsEssence, "three_worlds_essence_crystal");
     }
     
     public void setupItems()
@@ -266,5 +278,11 @@ public class EndItems {
         this.chestplateShadow = new ItemArmorShadow(ShadowArmor, 9, 1).setTextureName("endplus:chestplateShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowChestplate");
         this.legsShadow = new ItemArmorShadow(ShadowArmor, 9, 2).setTextureName("endplus:leggingsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowLegs");
         this.bootsShadow = new ItemArmorShadow(ShadowArmor, 9, 3).setTextureName("endplus:bootsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowBoots");
+        
+        this.overworldEssence = new ItemBase().setTextureName("endplus:overworldEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("overworldEssenceItem");
+        this.netherEssence = new ItemBase().setTextureName("endplus:netherEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("netherEssenceItem");
+        this.enderEssence = new ItemBase().setTextureName("endplus:enderEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("enderEssenceItem");
+        
+        this._3WorldsEssence = new ItemBase().setTextureName("endplus:3WorldsEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("3WorldsEssenceItem");
     }
 }

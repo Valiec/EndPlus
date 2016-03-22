@@ -1,0 +1,35 @@
+Char:
+
+	General info:
+
+		New block: Ash (NOT solid)
+
+		Ground primarily composed of a new block, Char Obsidian (I don't think the texture of regular obsidian looks good as a surface material)
+
+		compasses don't work here
+
+		Biomes:
+
+			Ash Plains: ash-covered plains, frequent lava lakes and small caverns, frequent creep patches
+				contains "River" sub-biomes which contain very high quantities of mineral ores
+
+			Molten Inferno: lava sea, occaisonal ash-covered obsidian islands
+
+			Infested Lands: plains covered in creep with frequent lava lakes and small caverns
+
+		Structures:
+
+			Zerg Spawning Pool
+
+			Zerg Spire
+
+			Ruined Terran Settlement (rare)
+
+
+	For dimension creation:
+			
+			Char will be a dimension (dim id 2) with the biomes listed above. The Zerg structures that spawn in the Infected biome will spawn here in all biomes (but only on creep!). As I listed above, compasses will not work here (as in the Nether).
+
+
+It would be a bit easier to code this if I had access to the source for the mod, but if I don't I could code this without it, but the Zerg structures would be missing (since I' not going to recode them from scratch).
+	

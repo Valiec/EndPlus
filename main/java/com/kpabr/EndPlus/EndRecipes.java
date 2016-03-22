@@ -154,6 +154,8 @@ public class EndRecipes {
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.stoneSlab), new Object[]{Blocks.stone_slab});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items.shadowCrystal), new Object[]{EndPlus.blocks.shadowBloom});
         GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.blocks.enderwoodPlanks, 4), new Object[]{EndPlus.blocks.endLog});
+        
+        GameRegistry.addShapelessRecipe(new ItemStack(EndPlus.items._3WorldsEssence, 1), new Object[]{EndPlus.items.overworldEssence, EndPlus.items.netherEssence, EndPlus.items.enderEssence, EndPlus.items.golderaldGem});
     }
     /*public void addMissingWoodRecipes()
     {

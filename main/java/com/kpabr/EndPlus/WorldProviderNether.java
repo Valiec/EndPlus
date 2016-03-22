@@ -1,5 +1,4 @@
 package com.kpabr.EndPlus;
-/*package valiec.EndPlus;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -27,7 +26,7 @@ public class WorldProviderNether extends WorldProvider
     @SideOnly(Side.CLIENT)
     public Vec3 getFogColor(float par1, float par2)
     {
-        return this.worldObj.getWorldVec3Pool().getVecFromPool(0.20000000298023224D, 0.029999999329447746D, 0.029999999329447746D);
+        return Vec3.createVectorHelper(0.20000000298023224D, 0.029999999329447746D, 0.029999999329447746D);
     }
 
     // JAVADOC METHOD $$ func_76556_a
@@ -45,7 +44,7 @@ public class WorldProviderNether extends WorldProvider
     // JAVADOC METHOD $$ func_76555_c
     public IChunkProvider createChunkGenerator()
     {
-        return new ChunkProviderHell(this.worldObj, this.worldObj.getSeed());
+        return new ChunkProviderNether(this.worldObj, this.worldObj.getSeed());
     }
 
     // JAVADOC METHOD $$ func_76569_d
@@ -82,6 +81,6 @@ public class WorldProviderNether extends WorldProvider
     // JAVADOC METHOD $$ func_80007_l
     public String getDimensionName()
     {
-        return "TestNether";
+        return "Nether";
     }
-}*/
+}

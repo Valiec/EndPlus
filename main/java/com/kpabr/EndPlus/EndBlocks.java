@@ -106,7 +106,7 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.endSapling, "ender_sapling");
         GameRegistry.registerBlock(this.enchSapling, "enchanted_oak_sapling");
         GameRegistry.registerBlock(this.enchBirchSapling, "enchanted_birch_sapling");
-        //GameRegistry.registerBlock(this.buoy, ItemBlockBuoy.class, "buoy");
+        GameRegistry.registerBlock(this.buoy, ItemBlockBuoy.class, "buoy");
         GameRegistry.registerBlock(this.endLeaves, "ender_leaves");
         GameRegistry.registerBlock(this.endLeavesGen, "ender_leaves_decay");
         GameRegistry.registerBlock(this.enchLeaves, "enchanted_leaves");

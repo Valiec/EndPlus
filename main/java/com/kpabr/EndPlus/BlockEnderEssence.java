@@ -23,11 +23,20 @@ public class BlockEnderEssence extends Block {
 	public BlockEnderEssence(Material par2Material) {
 		super(par2Material);
 	}
-	
+	@Override
+	public boolean canSilkHarvest()
+    {
+        return true;
+    }
 	@Override
     public int quantityDropped(Random par1Random)
     {
-        return 1 + par1Random.nextInt(1);
+        return 1 + par1Random.nextInt(3);
+    }
+	@Override
+	public Item getItemDropped(int par1, Random par2Random, int par3)
+    {
+        return EndPlus.items.enderEssence;
     }
 
 }
