@@ -40,9 +40,13 @@ public class TabEndplus extends CreativeTabs {
         {         
         return EndPlus.items.swordEnderite;
         }
-        else
+        else if (i == 3)
         {
         return EndPlus.items.endRD;
+        }
+        else
+        {
+        return EndPlus.items._3WorldsEssence;
         }
     }
     public String getTranslatedTabLabel()

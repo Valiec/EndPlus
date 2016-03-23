@@ -96,7 +96,13 @@ public class EndBlocks {
 	public static Block enderwoodStairs;
 	public static Block enderwoodSlab;
 	public static Block doubleEnderwoodSlab;
+	public static Block essenceOverworld;
+	public static Block essenceEmitterOverworld;
 	//public static Block enderwoodChest;
+	public static Block essenceNether;
+	public static Block essenceEmitterNether;
+	public static Block essenceEnder;
+	public static Block essenceEmitterEnder;
     
     
     public void registerBlocks()
@@ -181,25 +187,37 @@ public class EndBlocks {
         GameRegistry.registerBlock(this.enderwoodSlab, ItemBlockWoodSlab.class, "single_enderwood_slab");
         GameRegistry.registerBlock(this.doubleEnderwoodSlab, ItemBlockWoodSlab.class, "double_enderwood_slab");
         //GameRegistry.registerBlock(this.enderwoodChest, "enderwood_chest");
+        
+        GameRegistry.registerBlock(this.essenceOverworld, "essence_emitted_overworld");
+        
+        GameRegistry.registerBlock(this.essenceEmitterOverworld, "essence_emitter_overworld");
+        
+        GameRegistry.registerBlock(this.essenceNether, "essence_emitted_nether");
+        
+        GameRegistry.registerBlock(this.essenceEmitterNether, "essence_emitter_nether");
+        
+        GameRegistry.registerBlock(this.essenceEnder, "essence_emitted_ender");
+        
+        GameRegistry.registerBlock(this.essenceEmitterEnder, "essence_emitter_ender");
     }
     public void setupBlocks()
     {
         this.buoy = new BlockBuoy(Material.rock).setBlockName("buoy").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.9F);
         this.endLeaves = new BlockEnderLeaves(false).setBlockName("enderLeaves").setCreativeTab(EndPlus.tabEndplus).setLightOpacity(1);
         this.endLeavesGen = new BlockEnderLeaves(true).setBlockName("enderLeaves").setCreativeTab(null).setLightOpacity(1);
-        this.enchLeaves = new BlockEnchLeaves(false).setBlockName("enchLeaves").setCreativeTab(EndPlus.tabEndplus).setLightOpacity(1);
+        this.enchLeaves = new BlockEnchLeaves(false).setBlockName("enchLeaves").setCreativeTab(EndPlus.tabEndplusMagic).setLightOpacity(1);
         this.enchLeavesGen = new BlockEnchLeaves(true).setBlockName("enchLeaves").setCreativeTab(null).setLightOpacity(1);
-        this.enchLeavesBirch = new BlockEnchLeavesBirch(false).setBlockName("enchLeavesBirch").setCreativeTab(EndPlus.tabEndplus).setLightOpacity(1);
+        this.enchLeavesBirch = new BlockEnchLeavesBirch(false).setBlockName("enchLeavesBirch").setCreativeTab(EndPlus.tabEndplusMagic).setLightOpacity(1);
         this.enchLeavesBirchGen = new BlockEnchLeavesBirch(true).setBlockName("enchLeavesBirch").setCreativeTab(null).setLightOpacity(1);
         this.endLog = new BlockEnderLog().setBlockName("enderLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_big_oak1");
-        this.enchOakLog = new BlockEnchOakLog().setBlockName("enchOakLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_oak");
-        this.enchBirchLog = new BlockEnchBirchLog().setBlockName("enchBirchLog").setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("EndPlus:log_birch");
+        this.enchOakLog = new BlockEnchOakLog().setBlockName("enchOakLog").setCreativeTab(EndPlus.tabEndplusMagic).setBlockTextureName("EndPlus:log_oak");
+        this.enchBirchLog = new BlockEnchBirchLog().setBlockName("enchBirchLog").setCreativeTab(EndPlus.tabEndplusMagic).setBlockTextureName("EndPlus:log_birch");
         this.netherTorch = new BlockTorchBase(false).setBlockTextureName("endplus:netherTorch").setBlockName("netherTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
         this.enderTorch = new BlockTorchBase(true).setBlockTextureName("endplus:enderTorch").setBlockName("enderTorch").setCreativeTab(EndPlus.tabEndplus).setLightLevel(0.99F);
         this.graniteRough = new BlockBase(Material.rock).setBlockTextureName("endplus:graniteRough").setBlockName("graniteRough").setCreativeTab(EndPlus.tabEndplus).setHardness(1.6F).setResistance(10.0F);
         this.graniteSmooth = new BlockBase(Material.rock).setBlockTextureName("endplus:graniteSmooth").setBlockName("graniteSmooth").setCreativeTab(EndPlus.tabEndplus).setHardness(1.6F).setResistance(10.0F);
         this.enderStalk = new BlockEnderStalk().setBlockTextureName("endplus:enderStalk").setBlockName("enderStalk");
-        this.shadowBloom = new BlockShadowBloom().setBlockTextureName("endplus:shadow_bloom").setBlockName("shadowBloom").setCreativeTab(EndPlus.tabEndplus);
+        this.shadowBloom = new BlockShadowBloom().setBlockTextureName("endplus:shadow_bloom").setBlockName("shadowBloom").setCreativeTab(EndPlus.tabEndplusMagic);
         this.endDirt = new BlockEnderDirt(0, Material.ground).setBlockTextureName("endplus:enderDirt").setBlockName("enderDirt").setHardness(1.6F).setCreativeTab(EndPlus.tabEndplus);
         this.endGrass = new BlockEnderGrass(Material.grass).setBlockName("enderGrass").setHardness(1.6F).setCreativeTab(EndPlus.tabEndplus).setTickRandomly(true);
         this.soulDirt = new BlockHellDirt(0, Material.ground).setBlockTextureName("endplus:helldirt").setBlockName("soulDirt").setHardness(1.6F).setCreativeTab(EndPlus.tabEndplus);
@@ -215,13 +233,13 @@ public class EndBlocks {
         this.golderaldBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:quest_block").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockGolderald").setHardness(3.5F).setResistance(17.0F); 
         this.flameriteBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockFlamerite").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockFlamerite").setHardness(3.0F).setResistance(10.0F); 
         this.blockGoldFlamerite = new BlockBase(Material.rock).setBlockTextureName("endplus:blockGFlamerite").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockGoldFlamerite").setHardness(3.0F).setResistance(9.0F);
-        this.umbriteBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockUmbrite").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockUmbrite").setHardness(3.0F).setResistance(10.0F);
-        this.luciteBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockLucite").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockLucite").setHardness(3.0F).setResistance(10.0F);
+        this.umbriteBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockUmbrite").setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("blockUmbrite").setHardness(3.0F).setResistance(10.0F);
+        this.luciteBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockLucite").setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("blockLucite").setHardness(3.0F).setResistance(10.0F);
         this.netherStone = new BlockBase(Material.rock).setBlockTextureName("endplus:netherStone").setCreativeTab(EndPlus.tabEndplus).setBlockName("netherStone").setHardness(1.3F).setResistance(10.0F); 
         this.flameriteOre = new BlockBase(Material.rock).setBlockTextureName("endplus:flameriteOre").setCreativeTab(EndPlus.tabEndplus).setBlockName("flameriteOre").setHardness(1.5F).setResistance(3.0F);
         this.endSapling = new BlockEnderSapling().setCreativeTab(EndPlus.tabEndplus).setBlockName("enderSapling");
-        this.enchSapling = new BlockEnchOakSapling().setCreativeTab(EndPlus.tabEndplus).setBlockName("enchSapling");
-        this.enchBirchSapling = new BlockEnchBirchSapling().setCreativeTab(EndPlus.tabEndplus).setBlockName("enchBirchSapling");
+        this.enchSapling = new BlockEnchOakSapling().setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("enchSapling");
+        this.enchBirchSapling = new BlockEnchBirchSapling().setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("enchBirchSapling");
         this.endRedstone = (BlockRedstoneWire)(new BlockRedstoneWire().setCreativeTab(null).setBlockName("enderRedstoneDust")).setTickRandomly(true);
         this.endRedstoneOre = new BlockEnderRedstoneOre(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderRedstoneOre").setBlockTextureName("endplus:enderRedstoneOre").setHardness(3.0F).setResistance(15.0F);
         this.litEndRedstoneOre = new BlockEnderRedstoneOre(true).setCreativeTab(null).setBlockName("litEnderRedstoneOre").setBlockTextureName("endplus:enderRedstoneOre").setTickRandomly(true).setLightLevel(0.625F).setHardness(3.0F).setResistance(15.0F);
@@ -233,7 +251,7 @@ public class EndBlocks {
         this.mossStairs = new BlockMossyCobblestoneStairs(Blocks.mossy_cobblestone, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("mossStairs");
         this.bPlacer = new BlockPlacer().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockPlacer").setTickRandomly(true).setHardness(0.5F);
         this.Enderblock = new BlockEnder(false).setCreativeTab(EndPlus.tabEndplus).setBlockName("Enderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
-        this.EnchEnderblock = new BlockEnder(true).setCreativeTab(EndPlus.tabEndplus).setBlockName("EnchEnderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
+        this.EnchEnderblock = new BlockEnder(true).setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("EnchEnderblock").setBlockTextureName("endplus:enderBlock").setHardness(50.0F).setResistance(2000.0F);
         this.blockEnderRedstone = new BlockEnderRedstoneCompressed().setCreativeTab(EndPlus.tabEndplusRedstone).setBlockName("BlockEnderRedstone").setBlockTextureName("endplus:blockEnderRedstone").setHardness(5.0F).setResistance(10.0F);
         this.questBlock0 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_sword").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_0").setHardness(1.5F).setResistance(10.0F);
         this.questBlock1 = new BlockQuest().setBlockTextureName("endplus:quest_block_gflamerite_pickaxe").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_1").setHardness(1.5F).setResistance(10.0F);
@@ -252,8 +270,8 @@ public class EndBlocks {
         this.questBlock14 = new BlockQuest().setBlockTextureName("endplus:quest_block_enderwood_sapling").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_14").setHardness(1.5F).setResistance(10.0F);
         this.questBlock15 = new BlockQuest().setBlockTextureName("endplus:quest_block_nether_star").setCreativeTab(EndPlus.tabEndplus).setBlockName("questBlock_15").setHardness(1.5F).setResistance(10.0F);
         this.infusedQuartzBlock = new BlockBase(Material.rock).setBlockTextureName("endplus:blockQI").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockInfusedQuartz").setHardness(0.8F);
-        this.enchGrass = new BlockEnchGrass(Material.grass).setBlockName("enchGrass").setHardness(0.6F).setCreativeTab(EndPlus.tabEndplus).setTickRandomly(true);
-        this.golderaldOre = new BlockGolderaldOre(Material.rock).setBlockTextureName("endplus:oreGolderald").setCreativeTab(EndPlus.tabEndplus).setBlockName("golderaldOre").setHardness(1.5F).setResistance(15.0F);
+        this.enchGrass = new BlockEnchGrass(Material.grass).setBlockName("enchGrass").setHardness(0.6F).setCreativeTab(EndPlus.tabEndplusMagic).setTickRandomly(true);
+        this.golderaldOre = new BlockGolderaldOre(Material.rock).setBlockTextureName("endplus:oreGolderald").setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("golderaldOre").setHardness(1.5F).setResistance(15.0F);
         this.chiseledStone = new BlockBase(Material.rock).setBlockTextureName("endplus:chiseled_stone").setCreativeTab(EndPlus.tabEndplus).setBlockName("blockChiseledStone").setHardness(0.8F);
         this.stoneSlab = new BlockCustomSlab(false, Material.rock).setCreativeTab(EndPlus.tabEndplus).setBlockTextureName("minecraft:stone").setLightOpacity(0).setBlockName("smoothStoneSlab").setHardness(0.8F);
         this.doubleStoneSlab = new BlockCustomSlab(true, Material.rock).setCreativeTab(null).setBlockTextureName("minecraft:stone").setBlockName("smoothDoubleStoneSlab").setHardness(0.8F);
@@ -261,6 +279,12 @@ public class EndBlocks {
         this.enderwoodSlab = new BlockCustomSlab(false, Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setLightOpacity(0).setBlockName("enderwoodSlab").setBlockTextureName("endplus:planks_enderwood");
         this.doubleEnderwoodSlab = new BlockCustomSlab(true, Material.wood).setHardness(2.0F).setResistance(5.0F).setCreativeTab(null).setBlockName("enderwoodDoubleSlab").setBlockTextureName("endplus:planks_enderwood");
         this.enderwoodStairs = new BlockMossyCobblestoneStairs(EndPlus.blocks.enderwoodPlanks, 0).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodStairs");
+        this.essenceEmitterOverworld = new BlockEssenceEmitterOverworld().setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("EssenceEmitterOverworld").setHardness(0.5F);
+        this.essenceOverworld = new BlockEmittedEssenceOverworld().setCreativeTab(null).setBlockName("EssenceEmittedOverworld").setBlockTextureName("endplus:enderRed");
+        this.essenceEmitterNether = new BlockEssenceEmitterNether().setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("EssenceEmitterNether").setHardness(0.5F);
+        this.essenceNether = new BlockEmittedEssenceNether().setCreativeTab(null).setBlockName("EssenceEmittedNether").setBlockTextureName("endplus:enderRed");
+        this.essenceEmitterEnder = new BlockEssenceEmitterEnder().setCreativeTab(EndPlus.tabEndplusMagic).setBlockName("EssenceEmitterEnder").setHardness(0.5F);
+        this.essenceEnder = new BlockEmittedEssenceEnder().setCreativeTab(null).setBlockName("EssenceEmittedEnder").setBlockTextureName("endplus:enderRed");
         //this.endportal = new BlockEnderPortal(Material.portal).setHardness(-1.0F).setResistance(6000000.0F);
         //this.enderwoodChest = new BlockEnderwoodChest(0).setHardness(2.0F).setResistance(5.0F).setCreativeTab(EndPlus.tabEndplus).setBlockName("enderwoodPlanks");
 

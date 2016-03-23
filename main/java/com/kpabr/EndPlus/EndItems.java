@@ -194,8 +194,8 @@ public class EndItems {
     public void setupItems()
     {
     
-        this.umbriteCrystal = new ItemSpellBase(false).setTextureName("endplus:crystalUmbrite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("umbriteCrystal");
-        this.luciteCrystal = new ItemSpellBase(true).setTextureName("endplus:crystalLucite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("luciteCrystal");
+        this.umbriteCrystal = new ItemSpellBase(false).setTextureName("endplus:crystalUmbrite").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("umbriteCrystal");
+        this.luciteCrystal = new ItemSpellBase(true).setTextureName("endplus:crystalLucite").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("luciteCrystal");
         this.enderiteGem = new ItemEnderiteGem().setTextureName("endplus:gemEnderite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("enderiteGem");
         this.pickaxeEnderite = new ItemPickaxeBase(Enderite).setTextureName("endplus:pickaxeEnderite").setCreativeTab(EndPlus.tabEndplusTools).setUnlocalizedName("enderitePick");
         this.helmetEnderite = new ItemArmorBase(EnderiteArmor, 5, 0).setTextureName("endplus:helmetEnderite").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("enderiteHelmet");
@@ -262,27 +262,27 @@ public class EndItems {
         this.legsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 2).setTextureName("endplus:leggingsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzLegs");
         this.bootsInfusedQuartz = new ItemArmor(InfusedQuartzArmor, 8, 3).setTextureName("endplus:bootsInfusedQuartz").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("infusedQuartzBoots");
         
-        this.golderaldGem = new ItemGolderaldGem().setTextureName("endplus:gemGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldGem");
+        this.golderaldGem = new ItemGolderaldGem().setTextureName("endplus:gemGolderald").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("golderaldGem");
         this.stoneSlab = new ItemBlockStoneSlab(Blocks.stone).setCreativeTab(EndPlus.tabEndplus);
         this.woodSlab = new ItemBlockWoodSlab(EndPlus.blocks.enderwoodPlanks).setCreativeTab(EndPlus.tabEndplus);
         
         this.questCompass = new ItemQuestCompass().setTextureName("endplus:questcompass").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("questCompass");
         
-        this.golderaldWand = new ItemGolderaldWand(1).setTextureName("endplus:wandGolderald").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("golderaldWand");
-        this.luciteWand = new ItemGolderaldWand(0).setTextureName("endplus:wandLucite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("luciteWand");
-        this.umbriteWand = new ItemGolderaldWand(2).setTextureName("endplus:wandUmbrite").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("umbriteWand");
+        this.golderaldWand = new ItemGolderaldWand(1).setTextureName("endplus:wandGolderald").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("golderaldWand");
+        this.luciteWand = new ItemGolderaldWand(0).setTextureName("endplus:wandLucite").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("luciteWand");
+        this.umbriteWand = new ItemGolderaldWand(2).setTextureName("endplus:wandUmbrite").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("umbriteWand");
         
-        this.shadowCrystal = new ItemBase().setTextureName("endplus:shadowCrystal").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("shadowCrystal");
+        this.shadowCrystal = new ItemBase().setTextureName("endplus:shadowCrystal").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("shadowCrystal");
         
         this.helmetShadow = new ItemArmorShadow(ShadowArmor, 9, 0).setTextureName("endplus:helmetShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowHelmet");
         this.chestplateShadow = new ItemArmorShadow(ShadowArmor, 9, 1).setTextureName("endplus:chestplateShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowChestplate");
         this.legsShadow = new ItemArmorShadow(ShadowArmor, 9, 2).setTextureName("endplus:leggingsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowLegs");
         this.bootsShadow = new ItemArmorShadow(ShadowArmor, 9, 3).setTextureName("endplus:bootsShadow").setCreativeTab(EndPlus.tabEndplusCombat).setUnlocalizedName("shadowBoots");
         
-        this.overworldEssence = new ItemBase().setTextureName("endplus:overworldEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("overworldEssenceItem");
-        this.netherEssence = new ItemBase().setTextureName("endplus:netherEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("netherEssenceItem");
-        this.enderEssence = new ItemBase().setTextureName("endplus:enderEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("enderEssenceItem");
+        this.overworldEssence = new ItemBase().setTextureName("endplus:overworldEssence").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("overworldEssenceItem");
+        this.netherEssence = new ItemBase().setTextureName("endplus:netherEssence").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("netherEssenceItem");
+        this.enderEssence = new ItemBase().setTextureName("endplus:enderEssence").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("enderEssenceItem");
         
-        this._3WorldsEssence = new ItemBase().setTextureName("endplus:3WorldsEssence").setCreativeTab(EndPlus.tabEndplusItems).setUnlocalizedName("3WorldsEssenceItem");
+        this._3WorldsEssence = new ItemBase().setTextureName("endplus:3WorldsEssence").setCreativeTab(EndPlus.tabEndplusMagic).setUnlocalizedName("3WorldsEssenceItem");
     }
 }

@@ -67,6 +67,7 @@ public class EndPlus
     static CreativeTabs tabEndplusRedstone = new TabEndplus(CreativeTabs.getNextID(), "EndPlus Ender Redstone", 3);
     static CreativeTabs tabEndplusTools = new TabEndplus(CreativeTabs.getNextID(), "EndPlus Tools", 1);
     static CreativeTabs tabEndplusCombat = new TabEndplus(CreativeTabs.getNextID(), "EndPlus Combat", 2);
+    static CreativeTabs tabEndplusMagic = new TabEndplus(CreativeTabs.getNextID(), "EndPlus Magic", 4);
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
