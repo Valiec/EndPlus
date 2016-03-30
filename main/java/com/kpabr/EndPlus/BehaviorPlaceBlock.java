@@ -57,7 +57,7 @@ public class BehaviorPlaceBlock implements IBehaviorDispenseItem{
                 meta--;
             }
             System.out.println("ERROR: "+par1ItemStack.getItemDamage()+","+(int)(par4)+","+(int)(par5)+","+(int)(par6)+","); 
-        return (((ItemBlock)par1ItemStack.getItem()).placeBlockAt(par1ItemStack, Minecraft.getMinecraft().thePlayer, par0World, (int)(par4), (int)(par5), (int)(par6), meta, 0.5F, 0.5F, 0.5F,  par1ItemStack.getItemDamage()));
+        return (((ItemBlock)par1ItemStack.getItem()).placeBlockAt(par1ItemStack, null, par0World, (int)(par4), (int)(par5), (int)(par6), meta, 0.5F, 0.5F, 0.5F,  par1ItemStack.getItemDamage()));
             
         }
         else

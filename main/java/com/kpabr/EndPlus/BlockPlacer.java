@@ -32,44 +32,12 @@ public class BlockPlacer extends BlockDispenser {
     IIcon side;
    
     
-    public static final IRegistry dispenseBehaviorRegistry = new RegistryDefaulted(new BehaviorPlaceBlock());
+    public static IRegistry dispenseBehaviorRegistry;
     protected BlockPlacer()
     {
         super();
-        //Block b = (Block)(this.blockRegistry.getObject("block_placer"));
-        //Field[] f = b.getClass().getDeclaredFields();
-        //for (Field field : f)
-        //{
-        	//System.out.println(field.getName());
-        //}
-        /*try
-        {
-        	
-        
-            Field name = this.getClass().getDeclaredField("blockMaterial");
-            name.setAccessible(true);
-            name.set(this, Material.piston);
-        }
-        catch (IllegalArgumentException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        catch (IllegalAccessException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        catch (SecurityException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        catch (NoSuchFieldException e)
-        {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }*/
+        BehaviorPlaceBlock bpb = new BehaviorPlaceBlock();
+        this.dispenseBehaviorRegistry = new RegistryDefaulted(bpb);
     }
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_)
     {

@@ -1,6 +1,8 @@
 package com.kpabr.EndPlus;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneWire;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -13,7 +15,7 @@ import net.minecraft.world.World;
 
 public class EndRenderHandler extends RenderBlocks implements ISimpleBlockRenderingHandler{
  // JAVADOC METHOD $$ func_147788_h
-
+	@SideOnly(Side.CLIENT)
     public boolean renderBlockEnderRedstone(IBlockAccess world, Block p_147788_1_, int p_147788_2_, int p_147788_3_, int p_147788_4_)
     {
         Tessellator tessellator = Tessellator.instance;

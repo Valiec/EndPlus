@@ -11,6 +11,7 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 
 import com.kpabr.EndPlus.CommonProxy;
+import com.kpabr.EndPlus.client.GuiHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -54,7 +55,7 @@ public class EndPlus
     static EndRecipes recipes = new EndRecipes();
     static EndWorldgen worldgen = new EndWorldgen();
     static EndSpawners spawners = new EndSpawners();
-    static EndRendering rendering = new EndRendering();
+    public static EndRendering rendering = new EndRendering();
     static EndMobs mobs = new EndMobs();
     static EndVersionChecker versionChecker = new EndVersionChecker();
     public static EndPlus instance;
@@ -96,9 +97,9 @@ public class EndPlus
         {
         worldgen.dimID = EndPlus.config.getInt("OverrideDimensionID", Configuration.CATEGORY_GENERAL, EndPlus.config.get(Configuration.CATEGORY_GENERAL, "OverrideDimensionID", 6).getInt(), 2, 255, "Used to help generate the End");
         }
-        if(!config.hasKey(Configuration.CATEGORY_GENERAL, "AutoUpdate"))
+        if(!config.hasKey(Configuration.CATEGORY_GENERAL, "UseBlockBreaker"))
         {
-        EndPlus.config.getBoolean("AutoUpdate", Configuration.CATEGORY_GENERAL, true, "Sets whether the auto-upater will run");
+        EndPlus.config.getBoolean("UseBlockBreaker", Configuration.CATEGORY_GENERAL, true, "Sets whether the block breaker is present (it does not work in multiplayer)");
         }
         EndPlus.config.save();
         
@@ -117,11 +118,12 @@ public class EndPlus
      	recipes.setupSmelting();
      	recipes.setupEggs();
      	worldgen.setupWorldgen();
-     	rendering.setupArmorRenderers();
      	spawners.setupSpawners();
      	mobs.setupMobs();
      	proxy.registerRenderers();
-     	VillagerRegistry.instance().getRegisteredVillagers(); //Does nothing at this time, to be used for quest villager   
+     	VillagerRegistry.instance().getRegisteredVillagers();
+     	new GuiHandler();
+     	GameRegistry.registerTileEntity(TileEntityReaction.class, "Reaction");
     }
     
     @EventHandler
