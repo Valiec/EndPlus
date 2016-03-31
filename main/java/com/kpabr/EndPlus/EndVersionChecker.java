@@ -49,25 +49,6 @@ public class EndVersionChecker {
             return newestVersion; 
         }
     }
-    @SubscribeEvent
-    public void downloadNewestVersion(PlayerEvent.PlayerLoggedOutEvent event) throws UnknownHostException, IOException
-    {
-    	if(true)
-    	{
-	        File oldf = new File("newest.jar");
-	        oldf.renameTo(new File("newest.jar.backup"));
-	        URL dl;
-	        dl = new URL("http://www.kpabr.com/mcmods/endplus/latest2");
-	        ReadableByteChannel channel = Channels.newChannel(dl.openStream());
-	        FileOutputStream output = new FileOutputStream("newest.jar");
-	        String cwd = new java.io.File( "." ).getCanonicalPath(); //debug
-	        System.out.println(cwd); //debug
-	        output.getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
-	        output.close();
-    	}
-        
-        
-    }
     public String getNewestVersionNumber() throws UnknownHostException, IOException
     {
         return toVersionNumber(getNewestVersionID(true));
